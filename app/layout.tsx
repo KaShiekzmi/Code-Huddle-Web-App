@@ -3,6 +3,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import Footer from "@/components/layout/Footer";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Header />
         {children}
         <ScrollToTop />
+        <Footer />
       </body>
     </html>
   );
