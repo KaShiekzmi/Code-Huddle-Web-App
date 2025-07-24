@@ -10,7 +10,7 @@ const Modal = ({ src, type, onClose }: ModalProps) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
       <button
-        className="cursor-pointer absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 text-white text-xl sm:text-2xl"
+        className="cursor-pointer absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 text-white text-[40px] mr-2 sm:text-[40px]"
         onClick={onClose}
         aria-label="Close modal"
       >

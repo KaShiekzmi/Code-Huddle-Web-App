@@ -9,7 +9,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ title, description, iconSrc }: ServiceCardProps) => {
   return (
     <div className="w-full bg-[var(--color-white)] flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 gap-3 sm:gap-4">
-      <div className="flex flex-col md:flex-row items-center gap-3 sm:gap-4 w-full">
+      <div className="flex flex-col mb-2 md:flex-row items-center gap-3 sm:gap-4 w-full">
         <Image
           className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24"
           width={80}
