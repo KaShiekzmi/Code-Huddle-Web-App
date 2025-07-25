@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const ScrollToTop = () => {
-  const [dashOffset, setDashOffset] = useState(223.8); // Default: non-mobile circumference
+  const [dashOffset, setDashOffset] = useState(223.8);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -18,16 +18,14 @@ const ScrollToTop = () => {
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollFraction = docHeight > 0 ? scrollTop / docHeight : 0;
 
-      // Show/hide based on scroll position
       setIsVisible(scrollTop > 100);
 
-      // Calculate dash offset: 223.8 (non-mobile) or 188.5 (mobile)
       const circumference = isMobile ? 188.5 : 223.8;
       const newDashOffset = circumference * (1 - scrollFraction);
       setDashOffset(newDashOffset);
     };
 
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
