@@ -13,7 +13,7 @@ interface CaseStudy {
 
 const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
   const totalSlides = caseStudies.length;
-  const [currentSlide, setCurrentSlide] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(3);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
 
   const extendedCaseStudies = [
