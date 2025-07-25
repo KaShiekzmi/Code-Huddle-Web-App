@@ -1,7 +1,7 @@
 const CultureButton = () => {
   return (
-    <div className="w-full sm:w-[360px] md:w-[450px] lg:w-[508px] h-[100px] sm:h-[110px] lg:h-[120px] custom-rounded border-black border-2 flex items-center justify-center py-8 sm:py-9 lg:py-10 px-2.5 bg-[var(--color-royalblue-200)]">
-      <div className="flex items-center gap-2 sm:gap-2.5 hover:cursor-pointer hover:pl-2 transition-all duration-300">
+    <div className="w-full sm:w-[360px] md:w-[450px] lg:w-[508px] h-[100px] sm:h-[110px] lg:h-[120px] custom-rounded border-black border-2 flex items-center justify-center py-8 sm:py-9 lg:py-10 px-2.5 bg-[var(--color-royalblue-200)] cursor-pointer hover:pl-5 transition-all duration-300">
+      <div className="flex items-center gap-2 sm:gap-2.5 ">
         <span className="text-lg sm:text-xl md:text-2xl text-[var(--color-gray)]">
           Life at Code Huddle
         </span>
