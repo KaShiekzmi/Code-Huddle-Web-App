@@ -82,16 +82,15 @@ const Testimonials = () => {
         <div className="px-4 sm:px-8 md:px-16">
           <div
             className={`
-              grid 
-             ${
-               itemsPerSlide === 1
-                 ? "grid-cols-1"
-                 : itemsPerSlide === 2
-                 ? "grid-cols-1 lg:grid-cols-2"
-                 : "grid-cols-1 lg:grid-cols-6 lg:grid-rows-2"
-             }
+              ${
+                itemsPerSlide === 1
+                  ? "grid grid-cols-1"
+                  : itemsPerSlide === 2
+                  ? "grid grid-cols-1 lg:grid-cols-2"
+                  : "flex flex-col gap-4 sm:gap-6"
+              }
               gap-4 sm:gap-6
-              transition-all duration-600 ease-in-out
+              transition-all duration-600 ease-in-out 
               ${
                 isTransitioning
                   ? "opacity-0 translate-x-16 scale-95"
@@ -99,32 +98,89 @@ const Testimonials = () => {
               }
             `}
           >
-            {getCurrentSlideItems().map((testimonial, index) => (
-              <div
-                key={`${currentIndex}-${index}`}
-                className={`
-                  transition-all duration-600 ease-in-out mx-auto
-                  ${
-                    isTransitioning
-                      ? "opacity-0 translate-x-16"
-                      : "opacity-100 translate-x-0"
-                  }
-                  ${itemsPerSlide === 1 ? "w-full flex justify-center" : ""}
-                  ${itemsPerSlide === 5 && index < 2 ? "lg:col-span-3" : ""}
-                  ${itemsPerSlide === 5 && index >= 2 ? "lg:col-span-2" : ""}
-                  ${getDelayClass(index)}
-                `}
-              >
-                <TestimonialCard
-                  quote={testimonial.quote}
-                  name={testimonial.name}
-                  title={testimonial.title}
-                  location={testimonial.location}
-                  avatarSrc={testimonial.avatarSrc}
-                  stars={testimonial.stars}
-                />
-              </div>
-            ))}
+            {itemsPerSlide === 5 ? (
+              <>
+                <div className="flex justify-center gap-4 sm:gap-6">
+                  {getCurrentSlideItems()
+                    .slice(0, 2)
+                    .map((testimonial, index) => (
+                      <div
+                        key={`${currentIndex}-${index}`}
+                        className={`
+                        transition-all duration-600 ease-in-out
+                        ${
+                          isTransitioning
+                            ? "opacity-0 translate-x-16"
+                            : "opacity-100 translate-x-0"
+                        }
+                        ${getDelayClass(index)}
+                      `}
+                      >
+                        <TestimonialCard
+                          quote={testimonial.quote}
+                          name={testimonial.name}
+                          title={testimonial.title}
+                          location={testimonial.location}
+                          avatarSrc={testimonial.avatarSrc}
+                          stars={testimonial.stars}
+                        />
+                      </div>
+                    ))}
+                </div>
+                <div className="flex justify-center gap-4 sm:gap-6">
+                  {getCurrentSlideItems()
+                    .slice(2, 5)
+                    .map((testimonial, index) => (
+                      <div
+                        key={`${currentIndex}-${index + 2}`}
+                        className={`
+                        transition-all duration-600 ease-in-out
+                        ${
+                          isTransitioning
+                            ? "opacity-0 translate-x-16"
+                            : "opacity-100 translate-x-0"
+                        }
+                        ${getDelayClass(index + 2)}
+                      `}
+                      >
+                        <TestimonialCard
+                          quote={testimonial.quote}
+                          name={testimonial.name}
+                          title={testimonial.title}
+                          location={testimonial.location}
+                          avatarSrc={testimonial.avatarSrc}
+                          stars={testimonial.stars}
+                        />
+                      </div>
+                    ))}
+                </div>
+              </>
+            ) : (
+              getCurrentSlideItems().map((testimonial, index) => (
+                <div
+                  key={`${currentIndex}-${index}`}
+                  className={`
+                    transition-all duration-600 ease-in-out mx-auto
+                    ${
+                      isTransitioning
+                        ? "opacity-0 translate-x-16"
+                        : "opacity-100 translate-x-0"
+                    }
+                    ${itemsPerSlide === 1 ? "w-full flex justify-center" : ""}
+                    ${getDelayClass(index)}
+                  `}
+                >
+                  <TestimonialCard
+                    quote={testimonial.quote}
+                    name={testimonial.name}
+                    title={testimonial.title}
+                    location={testimonial.location}
+                    avatarSrc={testimonial.avatarSrc}
+                    stars={testimonial.stars}
+                  />
+                </div>
+              ))
+            )}
           </div>
         </div>
 
