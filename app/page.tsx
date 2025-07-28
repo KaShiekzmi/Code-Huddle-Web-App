@@ -1,9 +1,9 @@
-import Hero from "./landing/components/Hero";
-import Services from "./landing/components/Services";
-import Team from "./landing/components/Team";
-import CaseStudies from "./landing/components/CaseStudies";
-import Testimonials from "./landing/components/Testimonials";
-import Culture from "./landing/components/Culture";
+import Hero from "@/components/landing/Hero";
+import Services from "@/components/landing/Services";
+import Team from "@/components/landing/Team";
+import CaseStudies from "@/components/landing/CaseStudies";
+import Testimonials from "@/components/landing/Testimonials";
+import Culture from "@/components/landing/Culture";
 
 export default function Home() {
   return (

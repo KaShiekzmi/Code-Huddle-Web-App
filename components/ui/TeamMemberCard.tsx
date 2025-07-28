@@ -17,7 +17,7 @@ const TeamMemberCard = ({ name, role, imageSrc }: TeamMemberCardProps) => {
         alt={`${name} profile`}
         src={imageSrc}
       />
-      <div className="w-36 sm:w-40 md:w-44 rounded-full bg-[var(--color-white)] flex flex-col items-center py-2 px-3 sm:px-4 -mt-6 sm:-mt-7 md:-mt-8">
+      <div className="w-36 sm:w-40 md:w-44 rounded-full bg-[var(--color-white)] flex flex-col items-center py-2 px-3 sm:px-4 -mt-6 sm:-mt-7 md:-mt-8 shadow-sm">
         <span className="tracking-[0.01em] font-medium text-sm sm:text-base">
           {name}
         </span>

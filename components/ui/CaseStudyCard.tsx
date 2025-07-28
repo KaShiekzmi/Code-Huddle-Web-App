@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface CaseStudyCardProps {
   title: string;
@@ -16,15 +17,25 @@ const CaseStudyCard = ({
   imageSrc,
 }: CaseStudyCardProps) => {
   return (
-    <div className="w-full max-w-[352px] sm:max-w-[400px] lg:max-w-[320px] xl:max-w-[360px] rounded-lg flex flex-col h-[435px] lg:h-[520px] shadow-[0_1px_4px_rgba(12,12,13,0.1),0_1px_4px_rgba(12,12,13,0.05)]">
-      <Image
-        className="w-full h-[280px] sm:h-[263px] md:h-[250px] lg:h-[287px] rounded-t-lg object-cover"
-        width={352}
-        height={340}
-        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 30vw"
-        alt={`${title} image`}
-        src={imageSrc}
-      />
+    <motion.div
+      className={`w-full max-w-[352px] sm:max-w-[400px] lg:max-w-[320px] xl:max-w-[360px] rounded-lg flex flex-col h-[435px] lg:h-[520px] bg-[var(--color-white)] shadow-[0_1px_4px_rgba(12,12,13,0.1),0_1px_4px_rgba(12,12,13,0.05)] transition-all duration-300 ease-in-out scale-100 hover:scale-103 hover:shadow-2xl"
+      }`}
+      // whileHover={{ y: -5, rotateX: 5, rotateY: 5 }}
+      transition={{ duration: 0.3 }}
+      role="article"
+      aria-label={`Case study: ${title}`}
+    >
+      <div className="relative w-full h-[280px] sm:h-[263px] md:h-[250px] lg:h-[287px] rounded-t-lg overflow-hidden ">
+        <Image
+          className="w-full h-full object-cover"
+          width={352}
+          height={340}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 30vw"
+          alt={`${title} image`}
+          src={imageSrc}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      </div>
       <div className="rounded-b-lg bg-[var(--color-white)] flex flex-col flex-1 py-3 sm:py-4 px-3 sm:px-4 gap-3 sm:gap-4">
         <div className="flex items-center justify-between flex-col md:flex-col md:items-start lg:flex-row lg:items-center md:gap-2">
           <span className="font-medium text-sm sm:text-base">{title}</span>
@@ -58,7 +69,7 @@ const CaseStudyCard = ({
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

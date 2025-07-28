@@ -8,7 +8,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, iconSrc }: ServiceCardProps) => {
   return (
-    <div className="w-full bg-[var(--color-white)] flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 gap-3 sm:gap-4">
+    <div className="w-full h-full bg-[var(--color-white)] flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 gap-3 sm:gap-4 hover:bg-[#F4F8FF] hover:shadow-[-10px_10px_20px_rgba(0,0,0,0.2)] hover:cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out border-2 border-[#F5F5F5]">
       <div className="flex flex-col mb-2 md:flex-row items-center gap-3 sm:gap-4 w-full">
         <Image
           className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24"

@@ -3,7 +3,7 @@ import StatCard from "@/components/ui/StatCard";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden radial-blue-dark pt-30 sm:pt-45 md:pt-50 pb-16 sm:pb-24 md:pb-35 px-4 sm:px-6 md:px-8 flex flex-col items-center gap-6 sm:gap-8 text-center font-lexend">
+    <section className="relative overflow-hidden radial-blue-dark pt-30 sm:pt-45 md:pt-45 pb-16 sm:pb-24 md:pb-35 px-4 sm:px-6 md:px-8 flex flex-col items-center gap-6 sm:gap-8 text-center font-lexend">
       <div className="absolute top-0 right-0 w-1/3 sm:w-1/4 md:w-1/3 h-full opacity-20">
         <div className="flex flex-wrap h-full">
           {Array.from({ length: 60 }).map((_, index) => (
@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 rounded-full bg-[var(--color-royalblue)] blur-[200px] sm:blur-[300px] md:blur-[400px]" />
 
-      <div className="flex flex-col items-center gap-8 sm:gap-10 md:gap-12 z-10 max-w-7xl w-full px-2 sm:px-4">
+      <div className="flex flex-col items-center gap-8 sm:gap-10 md:gap-12 z-10 w-full px-2 sm:px-4">
         <div className="flex flex-col items-center gap-4 sm:gap-6">
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-ligconsolata text-white">
@@ -37,10 +37,10 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-6 sm:gap-8 w-full">
           <LogoCarousel />
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <StatCard title="50+" description="Successful Projects Delivered" />
-            <StatCard title="30+" description="Happy Clients Worldwide" />
-            <StatCard title="98%" description="Client Satisfaction Rate" />
-            <StatCard title="4+" description="Years of Innovation" />
+            <StatCard value="50+" description="Successful Projects Delivered" />
+            <StatCard value="30+" description="Happy Clients Worldwide" />
+            <StatCard value="98%" description="Client Satisfaction Rate" />
+            <StatCard value="4+" description="Years of Innovation" />
           </div>
         </div>
       </div>

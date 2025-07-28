@@ -1,7 +1,7 @@
 "use client";
 
 import CaseStudyCard from "@/components/ui/CaseStudyCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 
 interface CaseStudy {
@@ -15,6 +15,11 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
   const totalSlides = caseStudies.length;
   const [currentSlide, setCurrentSlide] = useState(3);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const [isAutoSliding, setIsAutoSliding] = useState(true);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+  const swipeThreshold = 50;
 
   const extendedCaseStudies = [
     ...caseStudies.slice(-3),
@@ -22,12 +27,37 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
     ...caseStudies.slice(0, 3),
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => prev + 1);
-    }, 3000);
-    return () => clearInterval(interval);
+  const startAutoSlide = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      if (isAutoSliding) {
+        setCurrentSlide((prev) => prev + 1);
+      }
+    }, 6000);
+  }, [isAutoSliding]);
+
+  const stopAutoSlide = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
   }, []);
+
+  const restartAutoSlideAfterSwipe = () => {
+    setIsAutoSliding(false);
+    stopAutoSlide();
+    setTimeout(() => {
+      setIsAutoSliding(true);
+      startAutoSlide();
+    }, 6000);
+  };
+
+  useEffect(() => {
+    startAutoSlide();
+    return () => stopAutoSlide();
+  }, [isAutoSliding, startAutoSlide, stopAutoSlide]);
 
   useEffect(() => {
     if (currentSlide === totalSlides + 3) {
@@ -66,22 +96,52 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
     return 100 / 3;
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > swipeThreshold;
+    const isRightSwipe = distance < -swipeThreshold;
+
+    if (isLeftSwipe) {
+      setCurrentSlide((prev) => prev + 1);
+      restartAutoSlideAfterSwipe();
+    } else if (isRightSwipe) {
+      setCurrentSlide((prev) => prev - 1);
+      restartAutoSlideAfterSwipe();
+    }
+
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
   return (
     <>
-      <div className="w-full max-w-6xl overflow-hidden">
+      <div className="w-full max-w-7xl overflow-x-clip ">
         <motion.div
           className="flex flex-nowrap"
           animate={{ x: `-${currentSlide * getSlideWidth()}%` }}
           transition={
             transitionEnabled
-              ? { duration: 0.5, ease: "easeInOut" }
+              ? { duration: 1, ease: "easeInOut" }
               : { duration: 0 }
           }
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {extendedCaseStudies.map((study, index) => (
             <div
               key={index}
-              className="flex-shrink-0 px-1 sm:px-2 w-full sm:w-1/2 md:w-1/3 flex justify-center"
+              className="flex-shrink-0 px-1 sm:px-2 w-full sm:w-1/2 md:w-1/3 flex justify-center hover:cursor-pointer"
             >
               <CaseStudyCard
                 title={study.title}
