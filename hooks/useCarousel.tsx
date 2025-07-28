@@ -31,7 +31,7 @@ interface CarouselState {
 export const useCarousel = ({
   totalItems,
   itemsPerSlide = 1,
-  autoSlideInterval = 5000,
+  autoSlideInterval = 4000,
   swipeThreshold = 50,
   transitionDuration = 600,
   infinite = false,
@@ -46,9 +46,6 @@ export const useCarousel = ({
     return itemsPerSlide;
   }, [itemsPerSlide]);
 
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
-
   const [itemsPerSlideState, setItemsPerSlide] = useState(getItemsPerSlide());
   const [currentIndex, setCurrentIndex] = useState(infinite ? paddingItems : 0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -62,7 +59,8 @@ export const useCarousel = ({
   const extendedIndex = infinite
     ? currentIndex
     : currentIndex * itemsPerSlideState;
-
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const startAutoSlide = useCallback(() => {
@@ -171,7 +169,7 @@ export const useCarousel = ({
           setIsTransitioning(false);
         }
       }, transitionDuration);
-      restartAutoSlideAfterSwipe();
+      restartAutoSlideAfterSwipe(); // Added for left swipe
     } else if (isRightSwipe) {
       setIsTransitioning(true);
       setSwipeDirection("right");
@@ -187,7 +185,7 @@ export const useCarousel = ({
           setIsTransitioning(false);
         }
       }, transitionDuration);
-      restartAutoSlideAfterSwipe();
+      restartAutoSlideAfterSwipe(); // Added for right swipe
     }
 
     touchStartX.current = 0;
@@ -202,7 +200,7 @@ export const useCarousel = ({
         setCurrentIndex(infinite ? index : index);
         setIsTransitioning(false);
       }, transitionDuration);
-      restartAutoSlideAfterSwipe();
+      restartAutoSlideAfterSwipe(); // Added for manual slide navigation
     }
   };
 
