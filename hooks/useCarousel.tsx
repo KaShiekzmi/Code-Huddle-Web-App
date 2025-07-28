@@ -8,16 +8,16 @@ interface CarouselOptions {
   autoSlideInterval?: number;
   swipeThreshold?: number;
   transitionDuration?: number;
-  infinite?: boolean; // Added infinite option
-  paddingItems?: number; // Added paddingItems option
+  infinite?: boolean;
+  paddingItems?: number;
 }
 
 interface CarouselState {
   currentIndex: number;
-  extendedIndex: number; // Added extendedIndex
+  extendedIndex: number;
   isTransitioning: boolean;
   isAutoSliding: boolean;
-  swipeDirection: "left" | "right" | null; // Added swipeDirection
+  swipeDirection: "left" | "right" | null;
   totalSlides: number;
   itemsPerSlide: number;
   handleTouchStart: (e: React.TouchEvent) => void;
