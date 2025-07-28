@@ -29,7 +29,7 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
     },
     infinite: true,
     paddingItems: 3,
-    autoSlideInterval: 6000,
+    autoSlideInterval: 5000,
   });
 
   const extendedCaseStudies = [

@@ -169,7 +169,7 @@ export const useCarousel = ({
           setIsTransitioning(false);
         }
       }, transitionDuration);
-      restartAutoSlideAfterSwipe(); // Added for left swipe
+      restartAutoSlideAfterSwipe();
     } else if (isRightSwipe) {
       setIsTransitioning(true);
       setSwipeDirection("right");
@@ -185,7 +185,7 @@ export const useCarousel = ({
           setIsTransitioning(false);
         }
       }, transitionDuration);
-      restartAutoSlideAfterSwipe(); // Added for right swipe
+      restartAutoSlideAfterSwipe();
     }
 
     touchStartX.current = 0;
@@ -200,7 +200,7 @@ export const useCarousel = ({
         setCurrentIndex(infinite ? index : index);
         setIsTransitioning(false);
       }, transitionDuration);
-      restartAutoSlideAfterSwipe(); // Added for manual slide navigation
+      restartAutoSlideAfterSwipe();
     }
   };
 
