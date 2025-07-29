@@ -3,11 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
+
+  const navMenuItems = [
+    { name: "Home", href: "/" },
+    { name: "Our Culture", href: "/our-culture" },
+    { name: "Insights & Learning", href: "/insights-learning" },
+    { name: "Career", href: "/career" },
+    { name: "Our Work", href: "/our-work" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,21 +64,19 @@ const Header = () => {
         />
       </Link>
       <div className="hidden md:flex items-center px-2 md:px-3 lg:px-4 space-x-1 md:space-x-2 lg:space-x-3 xl:space-x-4 min-w-fit">
-        <div className="border-[var(--color-royalblue)] border-solid border-b-[2px] py-2 px-2 md:px-2.5 lg:px-3 text-[var(--color-royalblue)] tracking-[0.01em] font-medium cursor-pointer text-xs md:text-sm lg:text-base xl:text-lg">
-          Home
-        </div>
-        <div className="py-2 px-2 md:px-2.5 lg:px-3 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-xs md:text-sm lg:text-base xl:text-lg">
-          Our Culture
-        </div>
-        <div className="py-2 px-2 md:px-2.5 lg:px-3 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-xs md:text-sm lg:text-base xl:text-lg">
-          Insights & Learning
-        </div>
-        <div className="py-2 px-2 md:px-2.5 lg:px-3 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-xs md:text-sm lg:text-base xl:text-lg">
-          Career
-        </div>
-        <div className="py-2 px-2 md:px-2.5 lg:px-3 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-xs md:text-sm lg:text-base xl:text-lg">
-          Our Work
-        </div>
+        {navMenuItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            className={`py-2 px-2 md:px-2.5 lg:px-3 cursor-pointer transition-colors duration-300 text-xs md:text-sm lg:text-base xl:text-lg ${
+              pathname === item.href
+                ? "border-[var(--color-royalblue)] border-solid border-b-[2px] text-[var(--color-royalblue)] tracking-[0.01em] font-medium"
+                : "hover:text-[var(--color-royalblue)]"
+            }`}
+          >
+            {item.name}
+          </Link>
+        ))}
       </div>
       <div className="md:hidden">
         <button
@@ -95,21 +103,19 @@ const Header = () => {
       </div>
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[var(--color-gray)] flex flex-col items-center md:hidden py-4">
-          <div className="border-[var(--color-royalblue)] border-solid border-b-[2px] py-2 px-4 text-[var(--color-royalblue)] tracking-[0.01em] font-medium cursor-pointer text-sm sm:text-base">
-            Home
-          </div>
-          <div className="py-2 px-4 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-sm sm:text-base">
-            Our Culture
-          </div>
-          <div className="py-2 px-4 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-sm sm:text-base">
-            Insights & Learning
-          </div>
-          <div className="py-2 px-4 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-sm sm:text-base">
-            Career
-          </div>
-          <div className="py-2 px-4 cursor-pointer hover:text-[var(--color-royalblue)] transition-colors duration-300 text-sm sm:text-base">
-            Our Work
-          </div>
+          {navMenuItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`py-2 px-4 cursor-pointer transition-colors duration-300 text-sm sm:text-base ${
+                pathname === item.href
+                  ? "border-[var(--color-royalblue)] border-solid border-b-[2px] text-[var(--color-royalblue)] tracking-[0.01em] font-medium"
+                  : "hover:text-[var(--color-royalblue)]"
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       )}
       <div className="hidden md:flex rounded-xl bg-[var(--color-royalblue)] items-center justify-center p-2 md:p-2.5 lg:p-3 xl:p-3.5 gap-2 cursor-pointer group min-w-fit">

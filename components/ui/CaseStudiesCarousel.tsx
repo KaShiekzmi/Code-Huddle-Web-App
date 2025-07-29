@@ -3,13 +3,7 @@
 import CaseStudyCard from "@/components/ui/CaseStudyCard";
 import { motion } from "framer-motion";
 import { useCarousel } from "@/hooks/useCarousel";
-
-interface CaseStudy {
-  title: string;
-  category: string;
-  description: string;
-  imageSrc: string;
-}
+import { CaseStudy } from "@/types/case-study";
 
 const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
   const {
