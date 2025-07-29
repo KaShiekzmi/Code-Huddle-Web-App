@@ -15,7 +15,7 @@ const LoadingSpinner = ({
     >
       <div className="flex items-center justify-center">
         <span
-          className="inline-block w-12 h-12 border-4 border-solid border-[rgba(41,112,255,0.2)] border-t-[#2970ff] rounded-full animate-spin"
+          className="inline-block w-12 h-12 border-4 border-solid border-[rgba(41,112,255,0.2)] border-t-[var(--color-primary)] rounded-full animate-spin"
           aria-label="Loading"
         />
       </div>

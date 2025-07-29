@@ -119,4 +119,184 @@ export const jobs = [
     location: "Remote",
     employmentType: "Full-Time",
   },
+  {
+    id: 13,
+    level: "Entry-Level",
+    date: "2024-12-02T00:00:00Z",
+    title: "Content Writer",
+    description:
+      "Create compelling content for websites, blogs, and marketing materials, ensuring clarity and SEO alignment.",
+    location: "Remote",
+    employmentType: "Intern",
+  },
+  {
+    id: 14,
+    level: "Mid-Level",
+    date: "2024-11-30T00:00:00Z",
+    title: "Product Manager",
+    description:
+      "Define product vision, gather requirements, and collaborate with development to deliver impactful features.",
+    location: "Hybrid",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 15,
+    level: "Junior-Level",
+    date: "2024-11-28T00:00:00Z",
+    title: "Graphic Designer",
+    description:
+      "Design visually engaging graphics for digital platforms, maintaining consistency with brand guidelines.",
+    location: "Onsite",
+    employmentType: "Part-Time",
+  },
+  {
+    id: 16,
+    level: "Senior-Level",
+    date: "2024-11-26T00:00:00Z",
+    title: "AI/ML Engineer",
+    description:
+      "Build and deploy machine learning models to solve real-world problems with scalable data pipelines.",
+    location: "Remote",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 17,
+    level: "Mid-Level",
+    date: "2024-11-24T00:00:00Z",
+    title: "Technical Writer",
+    description:
+      "Document technical specifications, write user manuals, and create developer guides for internal tools.",
+    location: "Hybrid",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 18,
+    level: "Entry-Level",
+    date: "2024-11-22T00:00:00Z",
+    title: "Customer Success Associate",
+    description:
+      "Assist clients with onboarding, provide support, and ensure customer satisfaction and retention.",
+    location: "Remote",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 19,
+    level: "Senior-Level",
+    date: "2024-11-20T00:00:00Z",
+    title: "Data Scientist",
+    description:
+      "Analyze data trends, build predictive models, and communicate insights to business stakeholders.",
+    location: "Onsite",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 20,
+    level: "Mid-Level",
+    date: "2024-11-18T00:00:00Z",
+    title: "Systems Administrator",
+    description:
+      "Maintain IT infrastructure, ensure system security, and support internal tools and networks.",
+    location: "Onsite",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 21,
+    level: "Junior-Level",
+    date: "2024-11-16T00:00:00Z",
+    title: "Business Analyst",
+    description:
+      "Evaluate business processes, identify improvement areas, and work with stakeholders to implement changes.",
+    location: "Hybrid",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 22,
+    level: "Senior-Level",
+    date: "2024-11-14T00:00:00Z",
+    title: "IT Security Manager",
+    description:
+      "Oversee organization’s cybersecurity strategies and ensure compliance with security standards.",
+    location: "Remote",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 23,
+    level: "Entry-Level",
+    date: "2024-11-12T00:00:00Z",
+    title: "Social Media Coordinator",
+    description:
+      "Manage social media accounts, schedule posts, and monitor engagement across platforms.",
+    location: "Remote",
+    employmentType: "Intern",
+  },
+  {
+    id: 24,
+    level: "Mid-Level",
+    date: "2024-11-10T00:00:00Z",
+    title: "Database Administrator",
+    description:
+      "Design, manage, and optimize SQL and NoSQL databases ensuring data integrity and availability.",
+    location: "Onsite",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 25,
+    level: "Senior-Level",
+    date: "2024-11-08T00:00:00Z",
+    title: "Enterprise Architect",
+    description:
+      "Design scalable enterprise solutions, align IT strategy with business goals, and lead architecture reviews.",
+    location: "Hybrid",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 26,
+    level: "Junior-Level",
+    date: "2024-11-06T00:00:00Z",
+    title: "Marketing Associate",
+    description:
+      "Support campaign execution, market research, and analytics to drive brand growth.",
+    location: "Remote",
+    employmentType: "Part-Time",
+  },
+  {
+    id: 27,
+    level: "Mid-Level",
+    date: "2024-11-04T00:00:00Z",
+    title: "SEO Specialist",
+    description:
+      "Optimize content for search engines, track SEO performance, and improve SERP rankings.",
+    location: "Remote",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 28,
+    level: "Entry-Level",
+    date: "2024-11-02T00:00:00Z",
+    title: "Junior Data Engineer",
+    description:
+      "Develop ETL pipelines, prepare data for analytics, and support data warehouse operations.",
+    location: "Hybrid",
+    employmentType: "Intern",
+  },
+  {
+    id: 29,
+    level: "Senior-Level",
+    date: "2024-10-31T00:00:00Z",
+    title: "Solutions Engineer",
+    description:
+      "Bridge sales and engineering by crafting solutions tailored to customer requirements and technical feasibility.",
+    location: "Onsite",
+    employmentType: "Full-Time",
+  },
+  {
+    id: 30,
+    level: "Mid-Level",
+    date: "2024-10-29T00:00:00Z",
+    title: "HR Generalist",
+    description:
+      "Manage recruitment, employee relations, and organizational policies to support HR operations.",
+    location: "Hybrid",
+    employmentType: "Full-Time",
+  },
 ];
