@@ -8,21 +8,22 @@ interface SearchInputProps {
 
 const SearchInput = ({ value, onChange, placeholder }: SearchInputProps) => {
   return (
-    <div className="w-full sm:w-[600px]">
-      <label className="w-full rounded-lg bg-white border border-gray-200 flex items-center justify-between py-2.5 px-4 gap-2.5 hover:bg-gray-50 transition-colors duration-200">
+    <div className="w-full sm:w-full md:w-full lg:w-[600px]">
+      <label className="w-full rounded-lg bg-white border border-gray-200 flex items-center justify-between py-2 sm:py-2.5 px-3 sm:px-4 gap-2 hover:bg-gray-50 transition-colors duration-200">
         <input
           type="text"
           placeholder={placeholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="flex-1 text-sm text-gray-600 bg-transparent outline-none"
+          className="flex-1 text-xs sm:text-sm text-gray-600 bg-transparent outline-none"
         />
         <svg
-          width="20"
-          height="20"
+          width="16"
+          height="16"
           viewBox="0 0 22 23"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="w-4 h-4 sm:w-5 sm:h-5"
         >
           <path
             fillRule="evenodd"

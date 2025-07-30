@@ -4,6 +4,17 @@ import { jobs } from "@/data/jobs";
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
+
+    // If id is provided, return a single job
+    if (id) {
+      const job = jobs.find((j) => j.id === parseInt(id, 10));
+      if (!job) {
+        return NextResponse.json({ error: "Job not found" }, { status: 404 });
+      }
+      return NextResponse.json({ job });
+    }
+
     const search = searchParams.get("search")?.toLowerCase() || "";
     const location = searchParams.getAll("location").filter(Boolean);
     const employmentType = searchParams
@@ -15,7 +26,17 @@ export async function GET(req: NextRequest) {
     const page = parseInt(searchParams.get("page") || "1", 10);
     const perPage = parseInt(searchParams.get("perPage") || "12", 10);
 
-    let filtered = jobs;
+    // Get current time in Pakistan timezone (PKT)
+    const now = new Date();
+    const pktTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "Asia/Karachi" })
+    );
+
+    let filtered = jobs.filter((job) => {
+      // Filter out jobs whose deadline has passed
+      const deadline = new Date(job.applicationDeadline);
+      return deadline > pktTime;
+    });
 
     if (search) {
       filtered = filtered.filter(

@@ -107,6 +107,7 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.href}
+              onClick={() => setIsMenuOpen(false)}
               className={`py-2 px-4 cursor-pointer transition-colors duration-300 text-sm sm:text-base ${
                 pathname === item.href
                   ? "border-[var(--color-royalblue)] border-solid border-b-[2px] text-[var(--color-royalblue)] tracking-[0.01em] font-medium"

@@ -23,7 +23,7 @@ const ActiveFilters = ({
   if (!hasActiveFilters) return null;
 
   return (
-    <div className="flex flex-wrap items-center justify-start gap-2">
+    <div className="flex flex-wrap items-center justify-start gap-1.5 sm:gap-2">
       {filters.search && (
         <FilterTag
           type="search"
@@ -31,7 +31,6 @@ const ActiveFilters = ({
           onRemove={() => onRemoveFilter("search", filters.search)}
         />
       )}
-
       {filters.location.map((location) => (
         <FilterTag
           key={location}
@@ -40,7 +39,6 @@ const ActiveFilters = ({
           onRemove={() => onRemoveFilter("location", location)}
         />
       ))}
-
       {filters.employmentType.map((type) => (
         <FilterTag
           key={type}
@@ -49,7 +47,6 @@ const ActiveFilters = ({
           onRemove={() => onRemoveFilter("employmentType", type)}
         />
       ))}
-
       {filters.experienceLevel.map((level) => (
         <FilterTag
           key={level}
@@ -58,10 +55,9 @@ const ActiveFilters = ({
           onRemove={() => onRemoveFilter("experienceLevel", level)}
         />
       ))}
-
       <button
         onClick={onClearAll}
-        className="flex items-center bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer"
+        className="flex items-center bg-gray-100 text-gray-700 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm hover:bg-gray-200 transition-colors cursor-pointer"
       >
         Clear all
       </button>

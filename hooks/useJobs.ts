@@ -18,6 +18,10 @@ export interface JobsApiResponse {
   totalPages: number;
 }
 
+export interface JobApiResponse {
+  job: Job;
+}
+
 export function useJobs({
   filters,
   page = 1,
@@ -39,5 +43,16 @@ export function useJobs({
       }),
     // @ts-expect-error: keepPreviousData is a valid option in recent versions of react-query
     keepPreviousData: true,
+  });
+}
+
+export function useJob(id: string | number) {
+  return useQuery<JobApiResponse>({
+    queryKey: ["job", id],
+    queryFn: () =>
+      apiClient<JobApiResponse>("/api/jobs", {
+        params: { id },
+      }),
+    enabled: !!id,
   });
 }

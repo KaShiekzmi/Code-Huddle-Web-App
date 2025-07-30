@@ -33,24 +33,24 @@ const CareerHero = () => {
   return (
     <motion.div
       ref={ref}
-      className="w-full min-h-[calc(100vh-100px)] mt-20 flex flex-col items-center justify-center py-14 px-4 sm:px-8 md:px-16 lg:px-24 bg-[var(--color-whitesmoke)] text-[var(--color-gray)] font-lexend"
+      className="w-full min-h-[calc(100vh-80px)] mt-5 flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:pt-25 md:pt-10 md:px-8 lg:px-12 xl:px-16 bg-[var(--color-whitesmoke)] text-[var(--color-gray)] font-lexend"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <div className="max-w-7xl w-full flex flex-col items-center gap-8">
+      <div className="w-full max-w-[1400px] lg:mt-15 flex flex-col items-center gap-6 sm:gap-8 md:gap-10">
         <motion.div
-          className="w-full flex flex-col items-center gap-4 px-4 sm:px-8 md:px-12 lg:px-16"
+          className="w-full flex flex-col items-center gap-4 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16"
           variants={itemVariants}
         >
           <motion.b
-            className="text-2xl sm:text-3xl md:text-4xl"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             variants={itemVariants}
           >
             Join Our Team
           </motion.b>
           <motion.p
-            className="text-base sm:text-lg text-[var(--color-dimgray)] text-center leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-[var(--color-dimgray)] text-center leading-relaxed max-w-3xl"
             variants={itemVariants}
           >
             Explore exciting career opportunities in our innovative software
@@ -60,10 +60,10 @@ const CareerHero = () => {
         </motion.div>
         <motion.div variants={itemVariants}>
           <Image
-            className="w-full sm:w-4/5 md:w-[268.7px] h-[277.5px] hover:scale-105 transition-transform duration-300"
-            width={268.7}
-            height={277.5}
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 268.7px"
+            className="w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] h-auto hover:scale-105 transition-transform duration-300"
+            width={450}
+            height={464}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 60vw, 450px"
             alt="Career opportunities illustration"
             src="/images/illustration/careerhero.svg"
           />

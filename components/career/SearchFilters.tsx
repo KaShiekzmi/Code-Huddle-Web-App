@@ -8,9 +8,10 @@ import ActiveFilters from "./ActiveFilters";
 
 interface SearchFiltersProps {
   onFilterChange: (filters: FilterValues) => void;
+  totalJobs: number;
 }
 
-const SearchFilters = ({ onFilterChange }: SearchFiltersProps) => {
+const SearchFilters = ({ onFilterChange, totalJobs }: SearchFiltersProps) => {
   const [filters, setFilters] = useState<FilterValues>({
     search: "",
     location: [],
@@ -81,47 +82,57 @@ const SearchFilters = ({ onFilterChange }: SearchFiltersProps) => {
   ];
 
   return (
-    <div ref={filtersRef} className="w-full space-y-4 mt-5">
-      <div className="flex flex-col sm:flex-row items-start justify-center gap-3 sm:gap-4">
+    <div
+      ref={filtersRef}
+      className="w-full space-y-3 sm:space-y-4 mt-4 sm:mt-5"
+    >
+      <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row items-start justify-center gap-2 sm:gap-3 md:gap-4 ">
         <SearchInput
           value={filters.search}
           onChange={(value) => updateFilter("search", value)}
           placeholder="Search for a job..."
         />
-
-        <DropdownFilter
-          label="Location"
-          value={filters.location}
-          onChange={(value) => updateFilter("location", value)}
-          options={locations}
-          isOpen={openDropdown === "location"}
-          onToggle={() => toggleDropdown("location")}
-        />
-
-        <DropdownFilter
-          label="Employment Type"
-          value={filters.employmentType}
-          onChange={(value) => updateFilter("employmentType", value)}
-          options={employmentTypes}
-          isOpen={openDropdown === "employmentType"}
-          onToggle={() => toggleDropdown("employmentType")}
-        />
-
-        <DropdownFilter
-          label="Experience Level"
-          value={filters.experienceLevel}
-          onChange={(value) => updateFilter("experienceLevel", value)}
-          options={experienceLevels}
-          isOpen={openDropdown === "experienceLevel"}
-          onToggle={() => toggleDropdown("experienceLevel")}
-        />
+        <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
+          <DropdownFilter
+            label="Location"
+            value={filters.location}
+            onChange={(value) => updateFilter("location", value)}
+            options={locations}
+            isOpen={openDropdown === "location"}
+            onToggle={() => toggleDropdown("location")}
+          />
+          <DropdownFilter
+            label="Employment Type"
+            value={filters.employmentType}
+            onChange={(value) => updateFilter("employmentType", value)}
+            options={employmentTypes}
+            isOpen={openDropdown === "employmentType"}
+            onToggle={() => toggleDropdown("employmentType")}
+          />
+          <DropdownFilter
+            label="Experience Level"
+            value={filters.experienceLevel}
+            onChange={(value) => updateFilter("experienceLevel", value)}
+            options={experienceLevels}
+            isOpen={openDropdown === "experienceLevel"}
+            onToggle={() => toggleDropdown("experienceLevel")}
+          />
+        </div>
       </div>
-
-      <ActiveFilters
-        filters={filters}
-        onRemoveFilter={removeFilter}
-        onClearAll={clearAllFilters}
-      />
+      <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+        <div className="flex-1">
+          <ActiveFilters
+            filters={filters}
+            onRemoveFilter={removeFilter}
+            onClearAll={clearAllFilters}
+          />
+        </div>
+        <div className="shrink-0">
+          <span className="text-xs sm:text-sm font-medium">
+            Total Jobs: <span className="font-bold">{totalJobs}</span>
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
