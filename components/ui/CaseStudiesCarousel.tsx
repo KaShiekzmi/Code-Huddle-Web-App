@@ -70,7 +70,7 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
                 title={study.title}
                 category={study.category}
                 description={study.description}
-                imageSrc={study.imageSrc}
+                images={study.images}
               />
             </div>
           ))}

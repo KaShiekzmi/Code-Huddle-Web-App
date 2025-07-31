@@ -3,31 +3,69 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CaseStudy } from "@/types/case-study";
+import { useState, useRef } from "react";
 
-const CaseStudyCard = ({
-  title,
-  category,
-  description,
-  imageSrc,
-}: CaseStudy) => {
+const CaseStudyCard = ({ title, category, description, images }: CaseStudy) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (images.length > 1) {
+      intervalRef.current = setInterval(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % images.length);
+      }, 1200);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    if (images.length > 1) {
+      setCurrentImageIndex(0);
+    }
+  };
+
   return (
     <motion.div
-      className={`w-full max-w-[352px] sm:max-w-[400px] lg:max-w-[320px] xl:max-w-[360px] rounded-lg flex flex-col h-[435px] lg:h-[520px] bg-[var(--color-white)] shadow-[0_1px_4px_rgba(12,12,13,0.1),0_1px_4px_rgba(12,12,13,0.05)] transition-all duration-300 ease-in-out scale-100 hover:scale-103 hover:shadow-2xl"
-      }`}
+      className={`w-full max-w-[352px] sm:max-w-[400px] lg:max-w-[320px] xl:max-w-[360px] rounded-lg flex flex-col h-[400px] lg:h-[470px] bg-[var(--color-white)] shadow-[0_1px_4px_rgba(12,12,13,0.1),0_1px_4px_rgba(12,12,13,0.05)] transition-all duration-300 ease-in-out scale-100 hover:scale-103 hover:shadow-2xl`}
       transition={{ duration: 0.3 }}
       role="article"
       aria-label={`Case study: ${title}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className="relative w-full h-[280px] sm:h-[263px] md:h-[250px] lg:h-[287px] rounded-t-lg overflow-hidden ">
-        <Image
-          className="w-full h-full object-cover"
-          width={352}
-          height={340}
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 30vw"
-          alt={`${title} image`}
-          src={imageSrc}
-        />
+      <div className="relative w-full h-[280px] sm:h-[263px] md:h-[250px] lg:h-[287px] rounded-t-lg overflow-hidden">
+        {images.map((imageSrc, index) => (
+          <Image
+            key={index}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            width={352}
+            height={340}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 30vw"
+            alt={`${title} image ${index + 1}`}
+            src={imageSrc}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+        {images.length > 1 && (
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1 z-10">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex
+                    ? "bg-white opacity-100"
+                    : "bg-white opacity-50"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <div className="rounded-b-lg bg-[var(--color-white)] flex flex-col flex-1 py-3 sm:py-4 px-3 sm:px-4 gap-3 sm:gap-4">
         <div className="flex items-center justify-between flex-col md:flex-col md:items-start lg:flex-row lg:items-center md:gap-2">
@@ -36,7 +74,7 @@ const CaseStudyCard = ({
             {category}
           </span>
         </div>
-        <p className="text-xs sm:text-sm md:text-base text-left max-w-full sm:max-w-[320px] md:max-w-[320px] flex-1 line-clamp-2 md:line-clamp-2 lg:line-clamp-5 xl:line-clamp-6">
+        <p className="text-xs sm:text-sm md:text-base text-left max-w-full line-clamp-3 md:line-clamp-3 lg:line-clamp-3 xl:line-clamp-3 ">
           {description}
         </p>
         <div className="flex justify-start">
