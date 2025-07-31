@@ -92,7 +92,7 @@ export default function JobDetailsSidebar({ job }: JobDetailsSidebarProps) {
       {(hasContent(job.level) ||
         hasContent(job.employmentType) ||
         hasContent(job.location) ||
-        hasContent(job.requiredExperience) ||
+        (job.requiredExperience && hasContent(job.requiredExperience)) ||
         hasContent(job.jobPostingDate)) && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6">
           <h3 className="text-base sm:text-lg md:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
@@ -121,7 +121,7 @@ export default function JobDetailsSidebar({ job }: JobDetailsSidebarProps) {
                 </span>
               </div>
             )}
-            {hasContent(job.requiredExperience) && (
+            {job.requiredExperience && hasContent(job.requiredExperience) && (
               <div className="flex items-center justify-between text-xs sm:text-sm">
                 <span className="text-gray-600">Experience:</span>
                 <span className="font-medium text-gray-900">

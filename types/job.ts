@@ -6,15 +6,15 @@ export interface Job {
   location: string;
   employmentType: string;
   requiredSkills: string[];
-  requiredExperience: string;
+  requiredExperience?: string;
   applicationDeadline: string;
   jobPostingDate: string;
-  applicationRequirements: string[];
-  detailedDescription: {
-    jobResponsibilities: string[];
-    jobRequirements: string[];
-    benefits: string[];
-    note: string;
+  applicationRequirements?: string[];
+  detailedDescription?: {
+    jobResponsibilities?: string[];
+    jobRequirements?: string[];
+    benefits?: string[];
+    note?: string;
   };
 }
 

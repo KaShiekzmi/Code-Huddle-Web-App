@@ -56,15 +56,15 @@ export default function JobDetailsPage() {
 
     const shareText = `🚀 Exciting Job Opportunity at Code Huddle!
   
-  ${jobTitle}
-  📍 Location: ${jobLocation}
-  💼 Level: ${jobLevel}
-  ⏰ Type: ${jobType}
+${jobTitle}
+ 📍 Location: ${jobLocation}
+ 💼 Level: ${jobLevel}
+ ⏰ Type: ${jobType}
   
-  Check out this amazing opportunity and apply now! 👇
-  ${jobUrl}
+Check out this amazing opportunity and apply now! 👇
+${jobUrl}
   
-  #JobOpportunity #CodeHuddle #TechJobs`;
+#JobOpportunity #CodeHuddle #TechJobs`;
 
     try {
       if (navigator.clipboard && window.isSecureContext) {
