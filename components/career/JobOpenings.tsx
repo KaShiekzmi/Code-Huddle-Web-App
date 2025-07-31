@@ -46,7 +46,7 @@ const JobOpenings = () => {
         />
         {isLoading ? (
           <div className="w-full flex justify-center py-8 sm:py-10">
-            <LoadingSpinner description="Loading jobs..." />
+            <LoadingSpinner />
           </div>
         ) : isError ? (
           <DataNotFound title="Error" description="Failed to load jobs." />

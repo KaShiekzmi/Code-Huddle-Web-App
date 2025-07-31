@@ -79,7 +79,7 @@ const CaseStudyCard = ({ title, category, description, images }: CaseStudy) => {
         </p>
         <div className="flex justify-start">
           <button className="flex items-center gap-2 text-sm sm:text-base text-[var(--color-royalblue)] hover:underline transition-all duration-300">
-            <span className="tracking-[0.01em] font-medium cursor-pointer">
+            <span className="tracking-[0.01em] font-medium cursor-pointer mb-1 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
               View Details
             </span>
             <svg

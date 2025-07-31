@@ -1,5 +1,6 @@
 export const caseStudies = [
   {
+    id: 1,
     title: "GYMYG",
     category: "Virtual Fitness Platform",
     description:
@@ -10,6 +11,7 @@ export const caseStudies = [
     ],
   },
   {
+    id: 2,
     title: "AutoIQ",
     category: "Smart Vehicle Diagnostic App",
     description:
@@ -17,6 +19,7 @@ export const caseStudies = [
     images: ["/images/case-studies/auto-iq.png"],
   },
   {
+    id: 3,
     title: "Honest Dog",
     category: "Puppy Adoption Platform",
     description:
@@ -27,6 +30,7 @@ export const caseStudies = [
     ],
   },
   {
+    id: 4,
     title: "Cookpy",
     category: "Food Ordering App",
     description:
@@ -34,6 +38,7 @@ export const caseStudies = [
     images: ["/images/case-studies/cms.png"],
   },
   {
+    id: 5,
     title: "CMS",
     category: "Certificate Management Portal",
     description:

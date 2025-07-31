@@ -35,7 +35,7 @@ export default function JobDetailsPage() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-50">
-        <LoadingSpinner description="Loading job details..." />
+        <LoadingSpinner />
       </div>
     );
   }

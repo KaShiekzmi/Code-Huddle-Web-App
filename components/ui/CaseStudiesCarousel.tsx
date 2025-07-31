@@ -67,10 +67,7 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
               className="flex-shrink-0 px-1 sm:px-2 w-full sm:w-1/2 md:w-1/3 flex justify-center hover:cursor-pointer"
             >
               <CaseStudyCard
-                title={study.title}
-                category={study.category}
-                description={study.description}
-                images={study.images}
+                {...study}
               />
             </div>
           ))}
