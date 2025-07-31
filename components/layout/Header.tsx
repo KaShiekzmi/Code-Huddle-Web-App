@@ -19,6 +19,13 @@ const Header = () => {
     { name: "Our Work", href: "/our-work" },
   ];
 
+  const isActiveMenuItem = (itemHref: string) => {
+    if (itemHref === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(itemHref);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -69,7 +76,7 @@ const Header = () => {
             key={item.name}
             href={item.href}
             className={`py-2 px-2 md:px-2.5 lg:px-3 cursor-pointer transition-colors duration-300 text-xs md:text-sm lg:text-base xl:text-lg ${
-              pathname === item.href
+              isActiveMenuItem(item.href)
                 ? "border-[var(--color-royalblue)] border-solid border-b-[2px] text-[var(--color-royalblue)] tracking-[0.01em] font-medium"
                 : "hover:text-[var(--color-royalblue)]"
             }`}
@@ -109,7 +116,7 @@ const Header = () => {
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
               className={`py-2 px-4 cursor-pointer transition-colors duration-300 text-sm sm:text-base ${
-                pathname === item.href
+                isActiveMenuItem(item.href)
                   ? "border-[var(--color-royalblue)] border-solid border-b-[2px] text-[var(--color-royalblue)] tracking-[0.01em] font-medium"
                   : "hover:text-[var(--color-royalblue)]"
               }`}
