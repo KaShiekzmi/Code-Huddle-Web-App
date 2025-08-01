@@ -1,5 +1,4 @@
 import { formatUtcDate } from "@/utils/formatUtcDate";
-import { Job } from "@/types/job";
 import Link from "next/link";
 
 interface JobCardProps {

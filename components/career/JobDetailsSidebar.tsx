@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { formatUtcDate } from "@/utils/formatUtcDate";
 import { hasContent } from "@/utils/hasContent";
 import { Job } from "@/types/job";
@@ -49,7 +50,10 @@ export default function JobDetailsSidebar({ job }: JobDetailsSidebarProps) {
           </div>
 
           {!isDeadlinePassed ? (
-            <button className="w-full bg-[var(--color-black)] hover:bg-[var(--color-gray)] cursor-pointer text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-1 sm:space-x-2">
+            <Link
+              href={`/career/${job.id}/apply`}
+              className="w-full bg-[var(--color-black)] hover:bg-[var(--color-gray)] cursor-pointer text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-1 sm:space-x-2"
+            >
               <svg
                 className="w-4 sm:w-5 h-5"
                 fill="none"
@@ -64,7 +68,7 @@ export default function JobDetailsSidebar({ job }: JobDetailsSidebarProps) {
                 />
               </svg>
               <span className="text-sm sm:text-base">Apply Now</span>
-            </button>
+            </Link>
           ) : (
             <button
               disabled
