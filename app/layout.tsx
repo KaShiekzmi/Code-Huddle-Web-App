@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import Footer from "@/components/layout/Footer";
+import QueryClientWrapper from "./QueryClientWrapper";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -25,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lexend.variable} antialiased`}>
         <Header />
-        {children}
+        <QueryClientWrapper>{children}</QueryClientWrapper>
         <ScrollToTop />
         <Footer />
       </body>

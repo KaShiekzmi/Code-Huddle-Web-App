@@ -2,25 +2,18 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-interface CaseStudyCardProps {
-  title: string;
-  category: string;
-  description: string;
-  imageSrc: string;
-}
+import { CaseStudy } from "@/types/case-study";
 
 const CaseStudyCard = ({
   title,
   category,
   description,
   imageSrc,
-}: CaseStudyCardProps) => {
+}: CaseStudy) => {
   return (
     <motion.div
       className={`w-full max-w-[352px] sm:max-w-[400px] lg:max-w-[320px] xl:max-w-[360px] rounded-lg flex flex-col h-[435px] lg:h-[520px] bg-[var(--color-white)] shadow-[0_1px_4px_rgba(12,12,13,0.1),0_1px_4px_rgba(12,12,13,0.05)] transition-all duration-300 ease-in-out scale-100 hover:scale-103 hover:shadow-2xl"
       }`}
-      // whileHover={{ y: -5, rotateX: 5, rotateY: 5 }}
       transition={{ duration: 0.3 }}
       role="article"
       aria-label={`Case study: ${title}`}
