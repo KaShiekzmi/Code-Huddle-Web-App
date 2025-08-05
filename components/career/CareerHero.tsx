@@ -84,33 +84,33 @@ const CareerHero = () => {
   return (
     <motion.section
       ref={ref}
-      className="relative min-h-[100vh] pt-10 flex items-center justify-center bg-[var(--color-whitesmoke)] overflow-hidden"
+      className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-[90vh] lg:min-h-[100vh] py-26 sm:py-26 md:pt-26 md:pb-26 lg:pt-24 flex items-center justify-center bg-[var(--color-whitesmoke)] overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-[var(--color-royalblue-200)] rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[var(--color-mediumblue)] rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[var(--color-royalblue-200)] rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 bg-[var(--color-royalblue-200)] rounded-full blur-2xl sm:blur-3xl"></div>
+        <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 bg-[var(--color-mediumblue)] rounded-full blur-2xl sm:blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-[var(--color-royalblue-200)] rounded-full blur-2xl sm:blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-[95vw] sm:max-w-3xl md:max-w-5xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
           <motion.div
-            className="flex-1 space-y-8 text-center lg:text-left"
+            className="flex-1 space-y-6 sm:space-y-8 text-center lg:text-left"
             variants={itemVariants}
           >
             <motion.div
-              className="inline-flex items-center gap-2 bg-[var(--color-royalblue-200)] border border-[var(--color-royalblue)] text-[var(--color-royalblue)] px-4 py-2 rounded-full text-sm font-medium"
+              className="inline-flex items-center gap-1.5 sm:gap-2 bg-[var(--color-royalblue-200)] border border-[var(--color-royalblue)] text-[var(--color-royalblue)] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium"
               variants={itemVariants}
             >
-              <div className="w-2 h-2 bg-[var(--color-royalblue)] rounded-full"></div>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[var(--color-royalblue)] rounded-full"></div>
               We&apos;re Hiring
             </motion.div>
 
             <motion.h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-gray)] leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[var(--color-gray)] leading-tight"
               variants={itemVariants}
             >
               Join Our{" "}
@@ -120,7 +120,7 @@ const CareerHero = () => {
             </motion.h1>
 
             <motion.p
-              className="text-lg sm:text-xl text-[var(--color-dimgray)] leading-relaxed max-w-2xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg md:text-xl text-[var(--color-dimgray)] leading-relaxed max-w-lg sm:max-w-xl md:max-w-2xl mx-auto lg:mx-0"
               variants={itemVariants}
             >
               Be part of a dynamic team that&apos;s shaping the future of
@@ -129,10 +129,10 @@ const CareerHero = () => {
             </motion.p>
 
             <motion.div
-              className="flex justify-center lg:justify-start "
+              className="flex justify-center lg:justify-start"
               variants={itemVariants}
             >
-              <div className="text-2xl font-bold text-[var(--color-royalblue)] min-h-[2rem] flex items-center">
+              <div className="text-xl sm:text-2xl font-bold text-[var(--color-royalblue)] min-h-[1.5rem] sm:min-h-[2rem] flex items-center">
                 <span>{displayText}</span>
                 <span className="animate-pulse">|</span>
               </div>
@@ -140,22 +140,22 @@ const CareerHero = () => {
           </motion.div>
 
           <motion.div
-            className="flex-1 relative flex justify-center lg:justify-end items-center p-4 lg:p-8"
+            className="flex-1 relative flex justify-center lg:justify-end items-center p-4 sm:p-6 lg:p-8"
             variants={imageVariants}
           >
-            <div className="relative flex items-center justify-center w-[400px]">
+            <div className="relative flex items-center justify-center w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px]">
               <Image
-                className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-[400px] drop-shadow-2xl"
+                className="w-full h-auto max-h-[250px] sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px] drop-shadow-2xl"
                 width={300}
                 height={300}
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, (max-width: 1024px) 40vw, 300px"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 300px"
                 alt="Career opportunities illustration"
                 src="/assets/images/illustrations/careerhero.svg"
                 priority
               />
 
               <motion.div
-                className="absolute -top-3 -right-3 bg-white rounded-full p-2 shadow-lg"
+                className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 bg-white rounded-full p-1.5 sm:p-2 shadow-lg"
                 animate={{ y: [-5, 5, -5] }}
                 transition={{
                   duration: 3,
@@ -164,7 +164,7 @@ const CareerHero = () => {
                 }}
               >
                 <svg
-                  className="w-8 h-8 text-green-500"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-green-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -179,7 +179,7 @@ const CareerHero = () => {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-3 -left-3 bg-white rounded-full p-2 shadow-lg"
+                className="absolute -bottom-2 sm:-bottom-3 -left-2 sm:-left-3 bg-white rounded-full p-1.5 sm:p-2 shadow-lg"
                 animate={{ y: [5, -5, 5] }}
                 transition={{
                   duration: 4,
@@ -188,7 +188,7 @@ const CareerHero = () => {
                 }}
               >
                 <svg
-                  className="w-8 h-8 text-[var(--color-royalblue)]"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[var(--color-royalblue)]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -207,12 +207,12 @@ const CareerHero = () => {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="w-6 h-10 border-2 border-[var(--color-dimgray)] rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-[var(--color-dimgray)] rounded-full mt-2"></div>
+        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-[var(--color-dimgray)] rounded-full flex justify-center">
+          <div className="w-1 h-2 sm:h-3 bg-[var(--color-dimgray)] rounded-full mt-1 sm:mt-2"></div>
         </div>
       </motion.div>
     </motion.section>

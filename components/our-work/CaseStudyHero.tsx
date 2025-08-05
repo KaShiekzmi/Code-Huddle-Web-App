@@ -11,8 +11,8 @@ interface CaseStudyHeroProps {
 
 const CaseStudyHero = ({ caseStudy }: CaseStudyHeroProps) => {
   return (
-    <section className="bg-[var(--color-black)] relative h-[70vh] min-h-[400px] overflow-hidden">
-      <div className="absolute inset-0 mt-18">
+    <section className="bg-[var(--color-black)] relative h-[50vh] sm:h-[60vh] md:h-[65vh] lg:h-[70vh] min-h-[300px] sm:min-h-[350px] md:min-h-[400px] overflow-hidden">
+      <div className="absolute inset-0 mt-12 sm:mt-16 md:mt-18">
         <Image
           src={caseStudy.visualAssets.coverImage}
           alt={caseStudy.projectTitle}
@@ -22,32 +22,32 @@ const CaseStudyHero = ({ caseStudy }: CaseStudyHeroProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
 
-        <div className="absolute inset-0 flex items-center justify-end opacity-10 pr-8">
+        <div className="absolute inset-0 flex items-center justify-end opacity-10 pr-4 sm:pr-6 md:pr-8">
           <Image
             src="/assets/images/company/watermark.svg"
             alt="Code Huddle Watermark"
-            width={400}
-            height={400}
-            className="w-80 h-80 sm:w-96 sm:h-96 object-contain rotate-45"
+            width={200}
+            height={200}
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain rotate-45"
           />
         </div>
       </div>
 
       <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="text-center text-white px-4 sm:px-6 md:px-8 max-w-4xl mx-auto">
+        <div className="text-center text-white px-4 sm:px-6 md:px-8 max-w-[90vw] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto">
           <motion.div
-            className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6"
+            className="inline-block bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <span className="text-sm font-medium">
+            <span className="text-xs sm:text-sm font-medium">
               {caseStudy.projectCategory}
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 hover:tracking-[0.05em] transition-all duration-300 hover:cursor-pointer"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-6 sm:mb-8 hover:tracking-[0.05em] transition-all duration-300 hover:cursor-pointer"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -56,15 +56,15 @@ const CaseStudyHero = ({ caseStudy }: CaseStudyHeroProps) => {
           </motion.h1>
 
           <motion.div
-            className="flex flex-wrap justify-center gap-6 text-sm sm:text-base"
+            className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm md:text-base"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {caseStudy.projectMetadata.clientName && (
-              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
                 <svg
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -80,9 +80,9 @@ const CaseStudyHero = ({ caseStudy }: CaseStudyHeroProps) => {
               </div>
             )}
             {caseStudy.projectMetadata.projectDuration && (
-              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
                 <svg
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -99,9 +99,9 @@ const CaseStudyHero = ({ caseStudy }: CaseStudyHeroProps) => {
             )}
             {caseStudy.projectMetadata.technologyStack &&
               caseStudy.projectMetadata.technologyStack.length > 0 && (
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                <div className="flex items-center gap-1.5 sm:gap-2 bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
                   <svg
-                    className="w-4 h-4"
+                    className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

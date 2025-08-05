@@ -20,8 +20,8 @@ const RelatedCaseStudies = ({
 
   if (isLoading) {
     return (
-      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-gray-50">
+        <div className="w-full max-w-[95vw] sm:max-w-3xl md:max-w-5xl lg:max-w-7xl mx-auto">
           <div className="flex justify-center">
             <LoadingSpinner />
           </div>
@@ -43,10 +43,10 @@ const RelatedCaseStudies = ({
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-gray-50">
+      <div className="w-full max-w-[95vw] sm:max-w-3xl md:max-w-5xl lg:max-w-7xl mx-auto">
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 sm:mb-10 md:mb-12 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -55,7 +55,7 @@ const RelatedCaseStudies = ({
           More Case Studies
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
           {relatedCaseStudies.map((caseStudy, index) => (
             <motion.div
               key={caseStudy.id}
@@ -70,7 +70,7 @@ const RelatedCaseStudies = ({
         </div>
 
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-10 md:mt-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -78,11 +78,11 @@ const RelatedCaseStudies = ({
         >
           <Link
             href="/our-work"
-            className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            className="inline-flex items-center px-6 sm:px-8 py-2 sm:py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm sm:text-base"
           >
             View All Case Studies
             <svg
-              className="w-5 h-5 ml-2"
+              className="w-4 h-4 sm:w-5 sm:h-5 ml-1.5 sm:ml-2"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
