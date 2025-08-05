@@ -1,0 +1,1163 @@
+export const jobs = [
+  {
+    slug: "front-end-web-developer",
+    id: 1,
+    title: "Front End Web Developer",
+    description:
+      "Lead web development projects using modern JavaScript frameworks with a focus on user experience and performance.",
+
+    experienceLevel: "Senior-Level",
+    employmentType: "Full-Time",
+    location: "Remote",
+
+    requiredSkills: ["React", "TypeScript", "Next.js", "CSS3", "HTML5", "Git"],
+    requiredExperience: "5-8 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Portfolio of recent work",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-12-25T00:00:00Z",
+    deadlineDate: "2025-01-15T23:59:59Z",
+
+    responsibilities: [
+      "Lead front-end development initiatives and mentor junior developers",
+      "Architect and implement scalable, responsive web applications",
+      "Collaborate with UX/UI designers to create intuitive user interfaces",
+      "Optimize application performance and ensure cross-browser compatibility",
+      "Participate in code reviews and maintain coding standards",
+      "Work closely with backend teams to integrate APIs and services",
+    ],
+    requirements: [
+      "5-8 years of experience in front-end development",
+      "Strong proficiency in React, TypeScript, and modern JavaScript",
+      "Experience with Next.js, CSS3, HTML5, and version control (Git)",
+      "Knowledge of responsive design principles and accessibility standards",
+      "Experience with testing frameworks and CI/CD pipelines",
+      "Excellent problem-solving and communication skills",
+    ],
+    benefits: [
+      "Competitive salary with performance bonuses",
+      "Flexible remote work environment",
+      "Health, dental, and vision insurance",
+      "401(k) matching program",
+      "Professional development budget",
+      "Unlimited PTO and flexible hours",
+    ],
+    additionalNotes:
+      "This is a senior-level position requiring strong leadership skills and the ability to mentor team members. Experience with performance optimization and accessibility is highly valued.",
+  },
+  {
+    slug: "ui-ux-designer",
+    // Basic Information
+    id: 2,
+    title: "UI/UX Designer",
+    description:
+      "Design intuitive interfaces and craft seamless user experiences across web and mobile platforms.",
+
+    experienceLevel: "Mid-Level",
+    employmentType: "Full-Time",
+    location: "Hybrid",
+
+    requiredSkills: [
+      "Figma",
+      "Adobe XD",
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+    ],
+    requiredExperience: "3-5 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Portfolio with case studies",
+      "Design challenge",
+    ],
+
+    postedDate: "2024-12-21T00:00:00Z",
+    deadlineDate: "2025-08-10T23:59:59Z",
+
+    responsibilities: [
+      "Create user-centered designs by understanding business requirements and user feedback",
+      "Create user flows, wireframes, prototypes and mockups",
+      "Translate requirements into style guides, design systems, design patterns and attractive user interfaces",
+      "Create original graphic designs (e.g. images, sketches and tables)",
+      "Identify and troubleshoot UX problems (e.g. responsiveness)",
+      "Collaborate with product managers and developers to implement attractive designs",
+    ],
+    requirements: [
+      "3-5 years of UI/UX design experience",
+      "Proficiency in Figma, Adobe XD, and other design tools",
+      "Strong understanding of user research and usability principles",
+      "Experience with wireframing, prototyping, and design systems",
+      "Knowledge of current design trends and best practices",
+      "Portfolio demonstrating strong design skills and user-centered approach",
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Hybrid work model with flexible scheduling",
+      "Comprehensive health benefits package",
+      "Professional development and conference attendance",
+      "Latest design tools and software licenses",
+      "Creative and collaborative work environment",
+    ],
+    additionalNotes:
+      "We're looking for a designer who can balance creativity with usability and has experience working in agile development environments.",
+  },
+  {
+    slug: "backend-developer",
+    // Basic Information
+    id: 3,
+    title: "Backend Developer",
+    description:
+      "Build scalable backend services using Node.js and MongoDB, ensuring API reliability and performance.",
+
+    experienceLevel: "Junior-Level",
+    employmentType: "Full-Time",
+    location: "Onsite",
+
+    requiredSkills: [
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "REST APIs",
+      "JavaScript",
+      "Git",
+    ],
+    requiredExperience: "1-3 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "GitHub profile",
+      "Technical coding test",
+    ],
+
+    postedDate: "2024-12-20T00:00:00Z",
+    deadlineDate: "2025-09-08T23:59:59Z",
+
+    responsibilities: [
+      "Develop and maintain server-side applications using Node.js",
+      "Design and implement RESTful APIs and microservices",
+      "Work with MongoDB and other databases for data storage and retrieval",
+      "Collaborate with frontend developers to integrate APIs",
+      "Write clean, maintainable, and well-documented code",
+      "Participate in code reviews and contribute to team best practices",
+    ],
+    requirements: [
+      "1-3 years of backend development experience",
+      "Strong knowledge of Node.js, Express.js, and JavaScript",
+      "Experience with MongoDB and database design principles",
+      "Understanding of REST API design and implementation",
+      "Familiarity with version control systems (Git)",
+      "Basic understanding of cloud platforms and deployment",
+    ],
+    benefits: [
+      "Competitive entry-level salary with growth opportunities",
+      "Onsite work environment with modern office facilities",
+      "Health insurance and wellness programs",
+      "Mentorship program with senior developers",
+      "Training and certification opportunities",
+      "Regular team events and social activities",
+    ],
+    additionalNotes:
+      "This is a great opportunity for developers looking to grow their backend skills. We provide mentorship and training to help you advance in your career.",
+  },
+  {
+    slug: "full-stack-developer",
+    // Basic Information
+    id: 4,
+    title: "Full Stack Developer",
+    description:
+      "Work across the stack to deliver robust web applications, from responsive frontends to secure, scalable backends.",
+
+    experienceLevel: "Senior-Level",
+    employmentType: "Full-Time",
+    location: "Remote",
+
+    requiredSkills: [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "TypeScript",
+      "Docker",
+      "AWS",
+    ],
+    requiredExperience: "5-8 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Portfolio of full-stack projects",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-12-18T00:00:00Z",
+    deadlineDate: "2025-09-12T23:59:59Z",
+
+    responsibilities: [
+      "Develop and maintain both frontend and backend components of web applications",
+      "Architect and implement scalable solutions across the entire technology stack",
+      "Design and optimize database schemas and queries for performance",
+      "Deploy and manage applications using Docker and cloud platforms",
+      "Lead technical discussions and mentor junior developers",
+      "Collaborate with cross-functional teams to deliver high-quality products",
+    ],
+    requirements: [
+      "5-8 years of full-stack development experience",
+      "Expertise in React, Node.js, TypeScript, and PostgreSQL",
+      "Experience with Docker containerization and AWS cloud services",
+      "Strong understanding of software architecture and design patterns",
+      "Experience with CI/CD pipelines and DevOps practices",
+      "Excellent problem-solving skills and ability to work independently",
+    ],
+    benefits: [
+      "Competitive senior-level salary with equity options",
+      "100% remote work with flexible hours",
+      "Comprehensive health, dental, and vision coverage",
+      "401(k) with company matching",
+      "Home office setup allowance",
+      "Unlimited PTO and professional development budget",
+    ],
+    additionalNotes:
+      "This role requires someone who can work independently and take ownership of entire features from concept to deployment. Experience with microservices architecture is a plus.",
+  },
+  {
+    slug: "devops-engineer",
+    // Basic Information
+    id: 5,
+    title: "DevOps Engineer",
+    description:
+      "Automate CI/CD pipelines, manage cloud infrastructure, and ensure system uptime and performance.",
+
+    experienceLevel: "Mid-Level",
+    employmentType: "Full-Time",
+    location: "Hybrid",
+
+    requiredSkills: [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Jenkins",
+      "Terraform",
+      "Linux",
+    ],
+    requiredExperience: "3-6 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Infrastructure as Code examples",
+      "Technical interview",
+    ],
+
+    postedDate: "2024-12-17T00:00:00Z",
+    deadlineDate: "2025-01-05T23:59:59Z",
+
+    responsibilities: [
+      "Design and implement CI/CD pipelines using Jenkins and other tools",
+      "Manage and optimize cloud infrastructure on AWS",
+      "Containerize applications using Docker and orchestrate with Kubernetes",
+      "Implement infrastructure as code using Terraform",
+      "Monitor system performance and ensure high availability",
+      "Automate deployment processes and configuration management",
+    ],
+    requirements: [
+      "3-6 years of DevOps or infrastructure engineering experience",
+      "Strong knowledge of Docker, Kubernetes, and AWS services",
+      "Experience with CI/CD tools like Jenkins, GitLab CI, or GitHub Actions",
+      "Proficiency in Terraform for infrastructure as code",
+      "Linux system administration skills",
+      "Understanding of networking, security, and monitoring",
+    ],
+    benefits: [
+      "Competitive salary with performance bonuses",
+      "Hybrid work model with flexible scheduling",
+      "Comprehensive health and wellness benefits",
+      "Professional development and certification support",
+      "Latest tools and cloud credits for learning",
+      "Collaborative team environment with growth opportunities",
+    ],
+    additionalNotes:
+      "We're looking for someone passionate about automation and infrastructure optimization. Experience with monitoring tools like Prometheus and Grafana is a plus.",
+  },
+  {
+    slug: "qa-engineer",
+    // Basic Information
+    id: 6,
+    title: "QA Engineer",
+    description:
+      "Test and validate software functionality, write automated test scripts, and maintain quality standards.",
+
+    experienceLevel: "Entry-Level",
+    employmentType: "Intern",
+    location: "Remote",
+
+    requiredSkills: [
+      "Selenium",
+      "Jest",
+      "Manual Testing",
+      "Bug Tracking",
+      "Test Planning",
+    ],
+    requiredExperience: "0-1 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Academic transcripts",
+      "Basic coding test",
+    ],
+
+    postedDate: "2024-12-15T00:00:00Z",
+    deadlineDate: "2025-08-20T23:59:59Z",
+
+    responsibilities: [
+      "Execute manual and automated test cases to validate software functionality",
+      "Write and maintain automated test scripts using Selenium and Jest",
+      "Report and track bugs using bug tracking systems",
+      "Participate in test planning and strategy development",
+      "Collaborate with development teams to understand requirements",
+      "Contribute to quality assurance processes and documentation",
+    ],
+    requirements: [
+      "0-1 years of QA testing experience or relevant coursework",
+      "Basic knowledge of testing methodologies and tools",
+      "Familiarity with Selenium, Jest, or similar testing frameworks",
+      "Understanding of bug tracking and test case management",
+      "Strong attention to detail and analytical thinking",
+      "Good communication skills and ability to work in a team",
+    ],
+    benefits: [
+      "Competitive internship stipend",
+      "Remote work experience with flexible hours",
+      "Mentorship from senior QA engineers",
+      "Hands-on experience with industry-standard tools",
+      "Potential for full-time conversion",
+      "Professional development and training opportunities",
+    ],
+    additionalNotes:
+      "This internship is perfect for students or recent graduates looking to start their career in software testing. We provide comprehensive training and mentorship.",
+  },
+  {
+    slug: "project-manager",
+    // Basic Information
+    id: 7,
+    title: "Project Manager",
+    description:
+      "Manage timelines, coordinate cross-functional teams, and ensure timely delivery of technology solutions.",
+
+    experienceLevel: "Senior-Level",
+    employmentType: "Full-Time",
+    location: "Onsite",
+
+    requiredSkills: [
+      "Agile",
+      "Scrum",
+      "Jira",
+      "Risk Management",
+      "Team Leadership",
+      "Stakeholder Management",
+    ],
+    requiredExperience: "6-10 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Project portfolio",
+      "Case study presentation",
+    ],
+
+    postedDate: "2024-12-13T00:00:00Z",
+    deadlineDate: "2025-01-18T23:59:59Z",
+
+    responsibilities: [
+      "Lead and manage multiple technology projects from initiation to completion",
+      "Coordinate cross-functional teams including developers, designers, and stakeholders",
+      "Develop and maintain project timelines, budgets, and resource allocation",
+      "Implement Agile/Scrum methodologies and facilitate sprint ceremonies",
+      "Identify and mitigate project risks and issues proactively",
+      "Communicate project status and progress to senior management and stakeholders",
+    ],
+    requirements: [
+      "6-10 years of project management experience in technology sector",
+      "Certification in Agile, Scrum, or PMP preferred",
+      "Strong experience with project management tools like Jira, Asana, or MS Project",
+      "Excellent leadership and team management skills",
+      "Strong stakeholder management and communication abilities",
+      "Experience with risk management and problem-solving",
+    ],
+    benefits: [
+      "Competitive senior-level salary with performance bonuses",
+      "Onsite work with modern office facilities",
+      "Comprehensive health, dental, and vision benefits",
+      "401(k) with company matching",
+      "Professional development and certification support",
+      "Leadership development programs",
+    ],
+    additionalNotes:
+      "This role requires strong leadership skills and the ability to manage complex projects with multiple stakeholders. Experience in software development lifecycle is essential.",
+  },
+  {
+    slug: "mobile-app-developer",
+    // Basic Information
+    id: 8,
+    title: "Mobile App Developer",
+    description:
+      "Develop cross-platform mobile applications with Flutter, ensuring seamless UI and smooth performance.",
+
+    experienceLevel: "Mid-Level",
+    employmentType: "Part-Time",
+    location: "Hybrid",
+
+    requiredSkills: [
+      "Flutter",
+      "Dart",
+      "Mobile UI/UX",
+      "REST APIs",
+      "Git",
+      "Firebase",
+    ],
+    requiredExperience: "2-4 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Mobile app portfolio",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-12-12T00:00:00Z",
+    deadlineDate: "2025-09-25T23:59:59Z",
+
+    responsibilities: [
+      "Develop cross-platform mobile applications using Flutter and Dart",
+      "Design and implement responsive and intuitive mobile user interfaces",
+      "Integrate mobile apps with backend services and REST APIs",
+      "Implement Firebase services for authentication, database, and analytics",
+      "Optimize app performance and ensure smooth user experience",
+      "Collaborate with designers and backend developers for seamless integration",
+    ],
+    requirements: [
+      "2-4 years of mobile app development experience",
+      "Strong proficiency in Flutter, Dart, and mobile development concepts",
+      "Experience with REST APIs and mobile app architecture",
+      "Knowledge of Firebase services and mobile app deployment",
+      "Understanding of mobile UI/UX principles and best practices",
+      "Experience with version control systems (Git)",
+    ],
+    benefits: [
+      "Competitive part-time salary with flexible hours",
+      "Hybrid work model with remote and office options",
+      "Health benefits for part-time employees",
+      "Professional development and training opportunities",
+      "Latest mobile development tools and devices",
+      "Collaborative team environment",
+    ],
+    additionalNotes:
+      "This part-time position is ideal for experienced mobile developers looking for flexible work arrangements. Experience with native iOS/Android development is a plus.",
+  },
+  {
+    slug: "cloud-solutions-architect",
+    // Basic Information
+    id: 9,
+    title: "Cloud Solutions Architect",
+    description:
+      "Design and implement cloud-native systems on AWS and Azure, aligning with business and security requirements.",
+
+    experienceLevel: "Senior-Level",
+    employmentType: "Full-Time",
+    location: "Remote",
+
+    requiredSkills: [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "Kubernetes",
+      "Microservices",
+      "Security",
+    ],
+    requiredExperience: "7-12 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Architecture portfolio",
+      "Technical design challenge",
+    ],
+
+    postedDate: "2024-12-10T00:00:00Z",
+    deadlineDate: "2025-09-30T23:59:59Z",
+
+    responsibilities: [
+      "Design and architect cloud-native solutions on AWS and Azure platforms",
+      "Develop infrastructure as code using Terraform and other IaC tools",
+      "Implement microservices architecture and container orchestration with Kubernetes",
+      "Ensure security best practices and compliance requirements are met",
+      "Lead cloud migration initiatives and optimize existing cloud infrastructure",
+      "Mentor development teams on cloud architecture and best practices",
+    ],
+    requirements: [
+      "7-12 years of experience in cloud architecture and infrastructure",
+      "Expert-level knowledge of AWS and Azure cloud services",
+      "Strong experience with Terraform, Kubernetes, and microservices",
+      "Deep understanding of cloud security, compliance, and governance",
+      "Experience with cloud migration and optimization strategies",
+      "Excellent communication and leadership skills",
+    ],
+    benefits: [
+      "Competitive senior-level salary with equity options",
+      "100% remote work with flexible scheduling",
+      "Comprehensive health, dental, and vision coverage",
+      "401(k) with generous company matching",
+      "Cloud certification and training budget",
+      "Latest cloud tools and resources",
+    ],
+    additionalNotes:
+      "This role requires deep expertise in cloud architecture and the ability to lead complex cloud initiatives. AWS and Azure certifications are highly valued.",
+  },
+  {
+    slug: "data-analyst",
+    // Basic Information
+    id: 10,
+    title: "Data Analyst",
+    description:
+      "Interpret complex datasets, build insightful dashboards, and support data-driven decision-making.",
+
+    experienceLevel: "Mid-Level",
+    employmentType: "Full-Time",
+    location: "Onsite",
+
+    requiredSkills: [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Excel",
+      "Statistics",
+      "Data Visualization",
+    ],
+    requiredExperience: "3-5 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Data analysis portfolio",
+      "SQL/Python assessment",
+    ],
+
+    postedDate: "2024-12-08T00:00:00Z",
+    deadlineDate: "2025-09-22T23:59:59Z",
+
+    responsibilities: [
+      "Analyze complex datasets to extract meaningful insights and trends",
+      "Create interactive dashboards and reports using Tableau and other BI tools",
+      "Write SQL queries to extract and manipulate data from various sources",
+      "Develop Python scripts for data processing and analysis",
+      "Present findings to stakeholders and support data-driven decision making",
+      "Collaborate with business teams to understand data requirements",
+    ],
+    requirements: [
+      "3-5 years of experience in data analysis or business intelligence",
+      "Strong proficiency in SQL, Python, and Excel for data manipulation",
+      "Experience with Tableau, Power BI, or similar visualization tools",
+      "Solid understanding of statistics and data analysis methodologies",
+      "Ability to create compelling data visualizations and presentations",
+      "Strong analytical thinking and problem-solving skills",
+    ],
+    benefits: [
+      "Competitive salary with performance-based bonuses",
+      "Onsite work with modern office facilities",
+      "Comprehensive health and wellness benefits",
+      "Professional development and training opportunities",
+      "Access to latest data analysis tools and platforms",
+      "Collaborative team environment with growth potential",
+    ],
+    additionalNotes:
+      "We're looking for someone who can translate complex data into actionable insights. Experience with machine learning and predictive analytics is a plus.",
+  },
+  {
+    slug: "technical-support-engineer",
+    id: 11,
+    title: "Technical Support Engineer",
+    description:
+      "Provide Tier 1 and Tier 2 support to end-users, troubleshoot technical issues, and escalate bugs to development.",
+
+    experienceLevel: "Junior-Level",
+    employmentType: "Part-Time",
+    location: "Hybrid",
+
+    requiredSkills: [
+      "Troubleshooting",
+      "Customer Service",
+      "Technical Documentation",
+      "Ticketing Systems",
+    ],
+    requiredExperience: "1-2 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Customer service examples",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-12-06T00:00:00Z",
+    deadlineDate: "2025-09-28T23:59:59Z",
+
+    responsibilities: [
+      "Provide technical support to end-users via phone, email, and chat",
+      "Troubleshoot software and hardware issues and provide solutions",
+      "Document technical issues and create knowledge base articles",
+      "Escalate complex issues to senior engineers or development teams",
+      "Maintain and update support tickets in the ticketing system",
+      "Assist with user onboarding and training sessions",
+    ],
+    requirements: [
+      "1-2 years of technical support or help desk experience",
+      "Strong troubleshooting and problem-solving skills",
+      "Excellent customer service and communication abilities",
+      "Experience with ticketing systems and technical documentation",
+      "Basic understanding of software applications and IT infrastructure",
+      "Ability to work in a fast-paced environment",
+    ],
+    benefits: [
+      "Competitive part-time salary with flexible scheduling",
+      "Hybrid work model with remote and office options",
+      "Health benefits for part-time employees",
+      "Professional development and training opportunities",
+      "Exposure to various technologies and systems",
+      "Potential for full-time conversion",
+    ],
+    additionalNotes:
+      "This role is perfect for someone looking to gain experience in technical support while maintaining work-life balance. Strong communication skills are essential.",
+  },
+  {
+    slug: "cybersecurity-specialist",
+    // Basic Information
+    id: 12,
+    title: "Cybersecurity Specialist",
+    description:
+      "Monitor systems for threats, implement security measures, and conduct regular vulnerability assessments.",
+
+    experienceLevel: "Senior-Level",
+    employmentType: "Full-Time",
+    location: "Remote",
+
+    requiredSkills: [
+      "Network Security",
+      "Penetration Testing",
+      "SIEM",
+      "Incident Response",
+      "Compliance",
+    ],
+    requiredExperience: "5-8 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Security certifications",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-12-04T00:00:00Z",
+    deadlineDate: "2025-09-15T23:59:59Z",
+
+    responsibilities: [
+      "Monitor and analyze security events using SIEM tools and other monitoring systems",
+      "Conduct penetration testing and vulnerability assessments on systems and networks",
+      "Develop and implement security policies, procedures, and best practices",
+      "Respond to security incidents and coordinate incident response activities",
+      "Ensure compliance with security standards and regulatory requirements",
+      "Provide security training and awareness programs for employees",
+    ],
+    requirements: [
+      "5-8 years of experience in cybersecurity or information security",
+      "Strong knowledge of network security, penetration testing, and SIEM tools",
+      "Experience with incident response and security incident management",
+      "Understanding of compliance frameworks (ISO 27001, SOC 2, GDPR)",
+      "Certifications like CISSP, CEH, or CompTIA Security+ preferred",
+      "Excellent analytical and problem-solving skills",
+    ],
+    benefits: [
+      "Competitive senior-level salary with performance bonuses",
+      "100% remote work with flexible scheduling",
+      "Comprehensive health, dental, and vision coverage",
+      "401(k) with company matching",
+      "Professional development and certification support",
+      "Latest security tools and resources",
+    ],
+    additionalNotes:
+      "This role requires someone with deep cybersecurity expertise and the ability to stay current with evolving threats. Experience with cloud security is highly valued.",
+  },
+  {
+    slug: "content-writer",
+    // Basic Information
+    id: 13,
+    title: "Content Writer",
+    description:
+      "Create compelling content for websites, blogs, and marketing materials, ensuring clarity and SEO alignment.",
+
+    experienceLevel: "Entry-Level",
+    employmentType: "Intern",
+    location: "Remote",
+
+    requiredSkills: [
+      "Content Writing",
+      "SEO",
+      "Copywriting",
+      "Research",
+      "Editing",
+    ],
+    requiredExperience: "0-1 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Writing samples",
+      "SEO knowledge test",
+    ],
+
+    postedDate: "2024-12-02T00:00:00Z",
+    deadlineDate: "2025-09-25T23:59:59Z",
+
+    responsibilities: [
+      "Write engaging content for websites, blogs, and marketing materials",
+      "Research topics and conduct interviews to gather information",
+      "Optimize content for search engines using SEO best practices",
+      "Edit and proofread content for clarity, grammar, and style",
+      "Collaborate with marketing teams to align content with brand voice",
+      "Create content calendars and meet publishing deadlines",
+    ],
+    requirements: [
+      "0-1 years of content writing experience or relevant coursework",
+      "Strong writing skills with excellent grammar and attention to detail",
+      "Basic understanding of SEO principles and content optimization",
+      "Ability to research topics and write engaging, informative content",
+      "Experience with content management systems and editing tools",
+      "Strong time management and organizational skills",
+    ],
+    benefits: [
+      "Competitive internship stipend",
+      "Remote work experience with flexible hours",
+      "Mentorship from senior content writers",
+      "Portfolio building opportunities",
+      "Potential for full-time conversion",
+      "Professional development and training",
+    ],
+    additionalNotes:
+      "This internship is ideal for students or recent graduates passionate about writing and digital marketing. We provide training in SEO and content strategy.",
+  },
+  {
+    slug: "product-manager",
+
+    id: 14,
+    title: "Product Manager",
+    description:
+      "Define product vision, gather requirements, and collaborate with development to deliver impactful features.",
+
+    experienceLevel: "Mid-Level",
+    employmentType: "Full-Time",
+    location: "Hybrid",
+
+    requiredSkills: [
+      "Product Strategy",
+      "User Research",
+      "Agile",
+      "Data Analysis",
+      "Stakeholder Management",
+    ],
+    requiredExperience: "4-6 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Product case studies",
+      "Strategy presentation",
+    ],
+
+    postedDate: "2024-11-30T00:00:00Z",
+    deadlineDate: "2025-09-18T23:59:59Z",
+
+    responsibilities: [
+      "Define product vision, strategy, and roadmap aligned with business goals",
+      "Conduct user research and gather requirements from stakeholders",
+      "Create and prioritize product backlogs and user stories",
+      "Collaborate with development teams to deliver high-quality features",
+      "Analyze product metrics and user feedback to drive improvements",
+      "Coordinate with cross-functional teams including design, engineering, and marketing",
+    ],
+    requirements: [
+      "4-6 years of product management experience in technology sector",
+      "Strong experience with Agile methodologies and product development lifecycle",
+      "Proficiency in user research, data analysis, and product strategy",
+      "Excellent stakeholder management and communication skills",
+      "Experience with product management tools like Jira, Aha!, or Productboard",
+      "Strong analytical thinking and problem-solving abilities",
+    ],
+    benefits: [
+      "Competitive salary with performance-based bonuses",
+      "Hybrid work model with flexible scheduling",
+      "Comprehensive health, dental, and vision benefits",
+      "401(k) with company matching",
+      "Professional development and conference attendance",
+      "Collaborative team environment with growth opportunities",
+    ],
+    additionalNotes:
+      "We're looking for someone who can balance user needs with business objectives. Experience with B2B SaaS products is a plus.",
+  },
+  {
+    slug: "graphic-designer",
+
+    id: 15,
+    title: "Graphic Designer",
+    description:
+      "Design visually engaging graphics for digital platforms, maintaining consistency with brand guidelines.",
+
+    experienceLevel: "Junior-Level",
+    employmentType: "Part-Time",
+    location: "Onsite",
+
+    requiredSkills: [
+      "Adobe Creative Suite",
+      "Illustrator",
+      "Photoshop",
+      "Brand Design",
+      "Typography",
+    ],
+    requiredExperience: "1-3 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Design portfolio",
+      "Design challenge",
+    ],
+
+    postedDate: "2024-11-28T00:00:00Z",
+    deadlineDate: "2025-09-30T23:59:59Z",
+
+    responsibilities: [
+      "Create visually appealing graphics for digital and print materials",
+      "Design marketing collateral including social media posts, banners, and brochures",
+      "Maintain brand consistency across all design projects",
+      "Collaborate with marketing teams to understand design requirements",
+      "Create and update design templates and style guides",
+      "Prepare files for print and digital production",
+    ],
+    requirements: [
+      "1-3 years of graphic design experience",
+      "Proficiency in Adobe Creative Suite (Illustrator, Photoshop, InDesign)",
+      "Strong understanding of typography, color theory, and layout principles",
+      "Experience with brand design and maintaining visual consistency",
+      "Knowledge of print and digital design requirements",
+      "Portfolio demonstrating creative and technical skills",
+    ],
+    benefits: [
+      "Competitive part-time salary with flexible hours",
+      "Onsite work with modern design studio facilities",
+      "Health benefits for part-time employees",
+      "Access to latest design software and tools",
+      "Creative and collaborative work environment",
+      "Professional development opportunities",
+    ],
+    additionalNotes:
+      "This part-time position is perfect for designers looking for flexible work arrangements. Experience with web design and UI/UX is a plus.",
+  },
+  {
+    slug: "ai-ml-engineer",
+
+    id: 16,
+    title: "AI/ML Engineer",
+    description:
+      "Build and deploy machine learning models to solve real-world problems with scalable data pipelines.",
+
+    experienceLevel: "Senior-Level",
+    employmentType: "Full-Time",
+    location: "Remote",
+
+    requiredSkills: [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Machine Learning",
+      "Deep Learning",
+      "MLOps",
+    ],
+    requiredExperience: "6-10 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "ML project portfolio",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-11-26T00:00:00Z",
+    deadlineDate: "2025-09-20T23:59:59Z",
+
+    responsibilities: [
+      "Design and develop machine learning models and algorithms",
+      "Build scalable data pipelines for model training and inference",
+      "Implement MLOps practices for model deployment and monitoring",
+      "Optimize model performance and ensure production readiness",
+      "Collaborate with data scientists and engineers to integrate ML solutions",
+      "Research and implement cutting-edge AI/ML technologies",
+    ],
+    requirements: [
+      "6-10 years of experience in machine learning and AI engineering",
+      "Expert-level proficiency in Python, TensorFlow, and PyTorch",
+      "Strong understanding of machine learning algorithms and deep learning",
+      "Experience with MLOps, model deployment, and production systems",
+      "Knowledge of big data technologies and cloud platforms",
+      "Excellent problem-solving and analytical skills",
+    ],
+    benefits: [
+      "Competitive senior-level salary with equity options",
+      "100% remote work with flexible scheduling",
+      "Comprehensive health, dental, and vision coverage",
+      "401(k) with generous company matching",
+      "Professional development and conference attendance",
+      "Latest AI/ML tools and cloud computing resources",
+    ],
+    additionalNotes:
+      "This role requires deep expertise in AI/ML and the ability to translate research into production solutions. Experience with cloud ML platforms is highly valued.",
+  },
+  {
+    slug: "technical-writer",
+
+    id: 17,
+    title: "Technical Writer",
+    description:
+      "Document technical specifications, write user manuals, and create developer guides for internal tools.",
+
+    experienceLevel: "Mid-Level",
+    employmentType: "Full-Time",
+    location: "Hybrid",
+
+    requiredSkills: [
+      "Technical Writing",
+      "Documentation",
+      "API Documentation",
+      "Markdown",
+      "Git",
+    ],
+    requiredExperience: "3-5 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Writing samples",
+      "Documentation test",
+    ],
+
+    postedDate: "2024-11-24T00:00:00Z",
+    deadlineDate: "2025-08-22T23:59:59Z",
+
+    responsibilities: [
+      "Create comprehensive technical documentation for software products and APIs",
+      "Write user manuals, developer guides, and system specifications",
+      "Collaborate with development teams to understand technical requirements",
+      "Maintain and update existing documentation to ensure accuracy",
+      "Create tutorials, how-to guides, and troubleshooting documentation",
+      "Ensure documentation follows company standards and best practices",
+    ],
+    requirements: [
+      "3-5 years of technical writing experience in technology sector",
+      "Strong technical writing skills with ability to explain complex concepts clearly",
+      "Experience with documentation tools, Markdown, and version control (Git)",
+      "Knowledge of API documentation and developer documentation",
+      "Ability to work with technical teams and understand software development",
+      "Strong attention to detail and organizational skills",
+    ],
+    benefits: [
+      "Competitive salary with performance-based bonuses",
+      "Hybrid work model with flexible scheduling",
+      "Comprehensive health and wellness benefits",
+      "Professional development and training opportunities",
+      "Latest documentation tools and software licenses",
+      "Collaborative team environment",
+    ],
+    additionalNotes:
+      "We're looking for someone who can bridge the gap between technical and non-technical audiences. Experience with developer documentation is essential.",
+  },
+  {
+    slug: "customer-success-associate",
+
+    id: 18,
+    title: "Customer Success Associate",
+    description:
+      "Assist clients with onboarding, provide support, and ensure customer satisfaction and retention.",
+
+    experienceLevel: "Entry-Level",
+    employmentType: "Full-Time",
+    location: "Remote",
+
+    requiredSkills: [
+      "Customer Service",
+      "CRM Systems",
+      "Onboarding",
+      "Communication",
+      "Problem Solving",
+    ],
+    requiredExperience: "1-2 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Customer service examples",
+      "Role-play assessment",
+    ],
+
+    postedDate: "2024-11-22T00:00:00Z",
+    deadlineDate: "2025-09-25T23:59:59Z",
+
+    responsibilities: [
+      "Guide customers through the onboarding process and product implementation",
+      "Provide ongoing support and training to ensure customer success",
+      "Monitor customer health and proactively address potential issues",
+      "Manage customer relationships and maintain high satisfaction scores",
+      "Collaborate with product and engineering teams to advocate for customer needs",
+      "Track customer metrics and contribute to retention strategies",
+    ],
+    requirements: [
+      "1-2 years of customer success or customer service experience",
+      "Strong communication and interpersonal skills",
+      "Experience with CRM systems and customer management tools",
+      "Ability to understand technical products and explain them to customers",
+      "Problem-solving skills and ability to handle customer escalations",
+      "Strong organizational and time management abilities",
+    ],
+    benefits: [
+      "Competitive entry-level salary with growth opportunities",
+      "100% remote work with flexible hours",
+      "Comprehensive health, dental, and vision coverage",
+      "401(k) with company matching",
+      "Professional development and training programs",
+      "Collaborative team environment",
+    ],
+    additionalNotes:
+      "This role is perfect for someone passionate about customer success and helping clients achieve their goals. Experience with SaaS products is a plus.",
+  },
+  {
+    slug: "data-scientist",
+
+    id: 19,
+    title: "Data Scientist",
+    description:
+      "Analyze data trends, build predictive models, and communicate insights to business stakeholders.",
+
+    experienceLevel: "Senior-Level",
+    employmentType: "Full-Time",
+    location: "Onsite",
+
+    requiredSkills: [
+      "Python",
+      "R",
+      "Statistics",
+      "Machine Learning",
+      "Data Visualization",
+      "SQL",
+    ],
+    requiredExperience: "5-8 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Research portfolio",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-11-20T00:00:00Z",
+    deadlineDate: "2025-01-18T23:59:59Z",
+
+    responsibilities: [
+      "Develop and implement predictive models and machine learning algorithms",
+      "Analyze large datasets to extract meaningful insights and trends",
+      "Create compelling data visualizations and presentations for stakeholders",
+      "Design and conduct statistical experiments and A/B tests",
+      "Collaborate with business teams to translate data insights into actionable recommendations",
+      "Mentor junior data scientists and contribute to team best practices",
+    ],
+    requirements: [
+      "5-8 years of experience in data science or related field",
+      "Expert-level proficiency in Python, R, SQL, and statistical analysis",
+      "Strong background in machine learning, statistics, and data visualization",
+      "Experience with big data technologies and cloud platforms",
+      "Excellent communication skills to present complex findings to non-technical audiences",
+      "Advanced degree in Statistics, Computer Science, or related field preferred",
+    ],
+    benefits: [
+      "Competitive senior-level salary with performance bonuses",
+      "Onsite work with modern office facilities",
+      "Comprehensive health, dental, and vision coverage",
+      "401(k) with company matching",
+      "Professional development and conference attendance",
+      "Latest data science tools and computing resources",
+    ],
+    additionalNotes:
+      "This role requires someone who can bridge the gap between data science and business strategy. Experience with deep learning and big data platforms is highly valued.",
+  },
+  {
+    slug: "systems-administrator",
+
+    id: 20,
+    title: "Systems Administrator",
+    description:
+      "Maintain IT infrastructure, ensure system security, and support internal tools and networks.",
+
+    experienceLevel: "Mid-Level",
+    employmentType: "Full-Time",
+    location: "Onsite",
+
+    requiredSkills: [
+      "Linux",
+      "Windows Server",
+      "Active Directory",
+      "Networking",
+      "Backup Systems",
+    ],
+    requiredExperience: "3-6 years",
+
+    applicationRequirements: [
+      "Resume/CV",
+      "Cover Letter",
+      "Infrastructure examples",
+      "Technical assessment",
+    ],
+
+    postedDate: "2024-11-18T00:00:00Z",
+    deadlineDate: "2025-01-20T23:59:59Z",
+
+    responsibilities: [
+      "Manage and maintain Windows and Linux server infrastructure",
+      "Configure and administer Active Directory and user management systems",
+      "Monitor network performance and troubleshoot connectivity issues",
+      "Implement and maintain backup and disaster recovery systems",
+      "Ensure system security through regular updates and security patches",
+      "Provide technical support to internal users and resolve system issues",
+    ],
+    requirements: [
+      "3-6 years of systems administration experience",
+      "Strong knowledge of Windows Server, Linux, and Active Directory",
+      "Experience with networking protocols, VPN, and network security",
+      "Understanding of backup systems and disaster recovery procedures",
+      "Knowledge of virtualization technologies (VMware, Hyper-V)",
+      "Strong troubleshooting and problem-solving skills",
+    ],
+    benefits: [
+      "Competitive salary with performance-based bonuses",
+      "Onsite work with modern IT infrastructure",
+      "Comprehensive health and wellness benefits",
+      "Professional development and certification support",
+      "Latest IT tools and equipment",
+      "Collaborative team environment with growth opportunities",
+    ],
+    additionalNotes:
+      "We're looking for someone who can maintain reliable IT infrastructure and ensure smooth operations. Experience with cloud platforms and automation is a plus.",
+  },
+];

@@ -11,7 +11,7 @@ const NotFound = () => {
           height={160}
           sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, (max-width: 1023px) 144px, 160px"
           alt="Code Huddle Logo"
-          src="/images/logo/code-huddle/pictorial.svg"
+          src="/assets/images/company/logo/pictorial.svg"
         />
         <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold">
           404

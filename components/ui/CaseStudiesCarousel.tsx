@@ -1,20 +1,30 @@
 "use client";
 
 import CaseStudyCard from "@/components/ui/CaseStudyCard";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-interface CaseStudy {
-  title: string;
-  category: string;
-  description: string;
-  imageSrc: string;
-}
+import { useCarousel } from "@/hooks/useCarousel";
+import { CaseStudy } from "@/types/case-study";
 
 const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
-  const totalSlides = caseStudies.length;
-  const [currentSlide, setCurrentSlide] = useState(3);
-  const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const {
+    currentIndex,
+    extendedIndex,
+    isTransitioning,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+    goToSlide,
+  } = useCarousel({
+    totalItems: caseStudies.length,
+    itemsPerSlide: (windowWidth) => {
+      if (windowWidth < 640) return 1;
+      if (windowWidth < 768) return 2;
+      return 3;
+    },
+    infinite: true,
+    paddingItems: 3,
+    autoSlideInterval: 5000,
+  });
 
   const extendedCaseStudies = [
     ...caseStudies.slice(-3),
@@ -22,40 +32,10 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
     ...caseStudies.slice(0, 3),
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => prev + 1);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (currentSlide === totalSlides + 3) {
-      setTimeout(() => {
-        setTransitionEnabled(false);
-        setCurrentSlide(3);
-      }, 500);
-    } else if (currentSlide === 0) {
-      setTimeout(() => {
-        setTransitionEnabled(false);
-        setCurrentSlide(totalSlides);
-      }, 500);
-    } else {
-      setTransitionEnabled(true);
-    }
-  }, [currentSlide, totalSlides]);
-
-  useEffect(() => {
-    if (!transitionEnabled) {
-      const id = setTimeout(() => setTransitionEnabled(true), 20);
-      return () => clearTimeout(id);
-    }
-  }, [transitionEnabled]);
-
   const getActiveDot = () => {
-    let idx = currentSlide - 3;
-    if (idx < 0) idx = totalSlides - 1;
-    if (idx >= totalSlides) idx = 0;
+    let idx = currentIndex - 3;
+    if (idx < 0) idx = caseStudies.length - 1;
+    if (idx >= caseStudies.length) idx = 0;
     return idx;
   };
 
@@ -68,26 +48,26 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
 
   return (
     <>
-      <div className="w-full max-w-6xl overflow-hidden">
+      <div className="w-full max-w-7xl overflow-x-clip">
         <motion.div
           className="flex flex-nowrap"
-          animate={{ x: `-${currentSlide * getSlideWidth()}%` }}
+          animate={{ x: `-${extendedIndex * getSlideWidth()}%` }}
           transition={
-            transitionEnabled
-              ? { duration: 0.5, ease: "easeInOut" }
+            isTransitioning
+              ? { duration: 1, ease: "easeInOut" }
               : { duration: 0 }
           }
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {extendedCaseStudies.map((study, index) => (
             <div
               key={index}
-              className="flex-shrink-0 px-1 sm:px-2 w-full sm:w-1/2 md:w-1/3 flex justify-center"
+              className="flex-shrink-0 px-1 sm:px-2 w-full sm:w-1/2 md:w-1/3 flex justify-center hover:cursor-pointer"
             >
               <CaseStudyCard
-                title={study.title}
-                category={study.category}
-                description={study.description}
-                imageSrc={study.imageSrc}
+                {...study}
               />
             </div>
           ))}
@@ -95,8 +75,9 @@ const CaseStudiesCarousel = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
       </div>
       <div className="flex items-center gap-1 mt-4">
         {caseStudies.map((_, index) => (
-          <div
+          <button
             key={index}
+            onClick={() => goToSlide(index + 3)}
             className={`w-6 sm:w-7 md:w-8 h-0.5 rounded-full ${
               getActiveDot() === index
                 ? "bg-[var(--color-gray)]"

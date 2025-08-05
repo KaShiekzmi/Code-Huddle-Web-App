@@ -1,13 +1,5 @@
 import Image from "next/image";
-
-interface TestimonialCardProps {
-  quote: string;
-  name: string;
-  title: string;
-  location: string;
-  avatarSrc: string;
-  stars: number;
-}
+import { Testimonial } from "@/types/testimonial";
 
 const TestimonialCard = ({
   quote,
@@ -16,7 +8,7 @@ const TestimonialCard = ({
   location,
   avatarSrc,
   stars,
-}: TestimonialCardProps) => {
+}: Testimonial) => {
   return (
     <div className="w-full max-w-[384px] sm:max-w-[448px] h-48 sm:h-52 snap-start rounded-xl bg-[var(--color-white)] flex flex-col p-3 sm:p-4 gap-3 sm:gap-4 shadow-md">
       <div className="flex justify-end gap-2">
@@ -26,7 +18,7 @@ const TestimonialCard = ({
           height={24}
           sizes="(max-width: 640px) 24px, 32px"
           alt="Testimonial icon"
-          src="/images/testimonial-icon.svg"
+          src="/assets/icons/ui/testimonial-icon.svg"
         />
       </div>
       <div className="flex flex-col gap-3 sm:gap-4 flex-1">

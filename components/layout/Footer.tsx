@@ -53,7 +53,7 @@ const Footer = () => {
                 height={36}
                 sizes="(max-width: 639px) 6vw, 7vw"
                 alt="Code Huddle Logo"
-                src="/images/logo/code-huddle/pictorial.svg"
+                src="/assets/images/company/logo/pictorial.svg"
               />
               <Image
                 className="w-32 sm:w-36 h-[16px] sm:h-[18px]"
@@ -61,7 +61,7 @@ const Footer = () => {
                 height={18}
                 sizes="(max-width: 639px) 32vw, 36vw"
                 alt="Code Huddle Wordmark"
-                src="/images/logo/code-huddle/wordmark.svg"
+                src="/assets/images/company/logo/wordmark.svg"
               />
             </div>
             <p className="max-w-64 sm:max-w-72 text-sm text-center sm:text-left sm:text-base">

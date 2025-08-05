@@ -8,10 +8,13 @@ interface CultureMediaProps {
 
 const CultureMedia = ({ src, type, onClick }: CultureMediaProps) => {
   return (
-    <div className="w-full h-full cursor-pointer relative" onClick={onClick}>
+    <div
+      className="w-full h-full cursor-pointer relative group"
+      onClick={onClick}
+    >
       {type === "image" ? (
         <Image
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           width={0}
           height={0}
           sizes="(max-width: 1023px) 100vw, 400px"
@@ -20,10 +23,14 @@ const CultureMedia = ({ src, type, onClick }: CultureMediaProps) => {
         />
       ) : (
         <>
-          <video className="w-full h-full object-cover" muted loop>
+          <video
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            muted
+            loop
+          >
             <source src={src} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:bg-black/20">
             <svg
               className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-white opacity-80 hover:opacity-100 transition-opacity"
               fill="currentColor"

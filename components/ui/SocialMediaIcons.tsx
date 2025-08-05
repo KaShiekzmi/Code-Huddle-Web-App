@@ -3,17 +3,17 @@ import Link from "next/link";
 
 const socialIcons = [
   {
-    src: "/icons/fb.svg",
+    src: "/assets/icons/social/facebook.svg",
     href: "https://facebook.com",
     alt: "Facebook",
   },
   {
-    src: "/icons/linkedin.svg",
+    src: "/assets/icons/social/linkedin.svg",
     href: "https://linkedin.com",
     alt: "LinkedIn",
   },
   {
-    src: "/icons/instagram.svg",
+    src: "/assets/icons/social/instagram.svg",
     href: "https://instagram.com",
     alt: "Instagram",
   },

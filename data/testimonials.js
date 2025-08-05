@@ -5,7 +5,7 @@ export const testimonials = [
     name: "Curt Toppel",
     title: "Director Technical - Gymyg",
     location: "California, USA",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 4,
   },
   {
@@ -14,7 +14,7 @@ export const testimonials = [
     name: "Sarah Johnson",
     title: "CEO - AutoIQ",
     location: "New York, USA",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 5,
   },
   {
@@ -23,7 +23,7 @@ export const testimonials = [
     name: "James Lee",
     title: "Founder - Honest Dog",
     location: "London, UK",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 4,
   },
   {
@@ -32,7 +32,7 @@ export const testimonials = [
     name: "Emily Chen",
     title: "Product Manager - TechCorp",
     location: "San Francisco, USA",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 5,
   },
   {
@@ -41,7 +41,7 @@ export const testimonials = [
     name: "Michael Brown",
     title: "CTO - StartUpX",
     location: "Toronto, Canada",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 4,
   },
   {
@@ -50,7 +50,7 @@ export const testimonials = [
     name: "Priya Singh",
     title: "Lead Developer - FinEdge",
     location: "Bangalore, India",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 5,
   },
   {
@@ -59,7 +59,7 @@ export const testimonials = [
     name: "Lucas Martin",
     title: "Operations Manager - GreenLeaf",
     location: "Berlin, Germany",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 4,
   },
   {
@@ -68,7 +68,7 @@ export const testimonials = [
     name: "Ava Thompson",
     title: "Head of Product - MedTech Solutions",
     location: "Sydney, Australia",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 5,
   },
   {
@@ -77,7 +77,7 @@ export const testimonials = [
     name: "David Kim",
     title: "CEO - EduSpark",
     location: "Seoul, South Korea",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 5,
   },
   {
@@ -85,7 +85,7 @@ export const testimonials = [
     name: "Alex Smith",
     title: "CEO - SparkLink",
     location: "New York, USA",
-    avatarSrc: "/images/avatar-placeholder.svg",
+    avatarSrc: "/assets/icons/ui/avatar-placeholder.svg",
     stars: 5,
   },
 ];
