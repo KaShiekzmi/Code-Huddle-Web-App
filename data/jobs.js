@@ -21,7 +21,7 @@ export const jobs = [
     ],
 
     postedDate: "2024-12-25T00:00:00Z",
-    deadlineDate: "2025-01-15T23:59:59Z",
+    deadlineDate: "2026-01-15T23:59:59Z",
 
     responsibilities: [
       "Lead front-end development initiatives and mentor junior developers",
@@ -80,7 +80,7 @@ export const jobs = [
     ],
 
     postedDate: "2024-12-21T00:00:00Z",
-    deadlineDate: "2025-08-10T23:59:59Z",
+    deadlineDate: "2026-08-10T23:59:59Z",
 
     responsibilities: [
       "Create user-centered designs by understanding business requirements and user feedback",
@@ -139,7 +139,7 @@ export const jobs = [
     ],
 
     postedDate: "2024-12-20T00:00:00Z",
-    deadlineDate: "2025-09-08T23:59:59Z",
+    deadlineDate: "2026-09-08T23:59:59Z",
 
     responsibilities: [
       "Develop and maintain server-side applications using Node.js",
@@ -198,7 +198,7 @@ export const jobs = [
     ],
 
     postedDate: "2024-12-18T00:00:00Z",
-    deadlineDate: "2025-09-12T23:59:59Z",
+    deadlineDate: "2026-09-12T23:59:59Z",
 
     responsibilities: [
       "Develop and maintain both frontend and backend components of web applications",
@@ -257,7 +257,7 @@ export const jobs = [
     ],
 
     postedDate: "2024-12-17T00:00:00Z",
-    deadlineDate: "2025-01-05T23:59:59Z",
+    deadlineDate: "2026-01-05T23:59:59Z",
 
     responsibilities: [
       "Design and implement CI/CD pipelines using Jenkins and other tools",
@@ -315,7 +315,7 @@ export const jobs = [
     ],
 
     postedDate: "2024-12-15T00:00:00Z",
-    deadlineDate: "2025-08-20T23:59:59Z",
+    deadlineDate: "2026-08-20T23:59:59Z",
 
     responsibilities: [
       "Execute manual and automated test cases to validate software functionality",
